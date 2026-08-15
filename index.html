@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Para Romi ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: white;
+      background:
+        radial-gradient(circle at top, #172554 0%, #080b18 45%, #03040a 100%);
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1px);
+      background-size: 70px 70px;
+      opacity: .35;
+      animation: moveStars 18s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from { transform: translateY(0); }
+      to { transform: translateY(70px); }
+    }
+
+    .container {
+      width: 90%;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      padding: 70px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .heart {
+      font-size: 55px;
+      animation: heartbeat 1.8s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 15px 0;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      color: #cbd5ff;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .date {
+      margin: 30px 0;
+      font-size: 20px;
+      letter-spacing: 5px;
+      color: #93c5fd;
+    }
+
+    .photo {
+      width: 230px;
+      height: 300px;
+      margin: 35px auto;
+      border-radius: 25px;
+      border: 1px solid rgba(255,255,255,.25);
+      background: linear-gradient(145deg, #111827, #172554);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+      overflow: hidden;
+    }
+
+    .photo span {
+      padding: 25px;
+      color: #cbd5e1;
+      font-size: 16px;
+    }
+
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 15px 28px;
+      font-size: 16px;
+      color: white;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      box-shadow: 0 10px 30px rgba(37,99,235,.35);
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    button:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    .story {
+      display: none;
+      margin-top: 80px;
+      animation: appear 1.5s ease;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      text-align: left;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 28px;
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      line-height: 1.9;
+      box-shadow: 0 20px 50px rgba(0,0,0,.25);
+    }
+
+    .card h2 {
+      text-align: center;
+      color: #bfdbfe;
+    }
+
+    .final {
+      margin-top: 60px;
+      font-size: 24px;
+      line-height: 1.6;
+    }
+
+    .small {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="stars"></div>
+
+  <main class="container">
+
+    <div class="heart">❤️</div>
+
+    <h1>Para ti, Romi</h1>
+
+    <p class="subtitle">
+      Hay historias que comienzan sin saber que algún día
+      se convertirán en algo tan importante.
+    </p>
+
+    <div class="date">
+      29 · 04 · 2025
+    </div>
+
+    <div class="photo">
+      <span>
+        Aquí irá tu foto ❤️
+      </span>
+    </div>
+
+    <button onclick="abrirRegalo()">
+      Abrir mi regalo ✨
+    </button>
+
+    <section class="story" id="historia">
+
+      <div class="card">
+
+        <h2>¿Te acuerdas de cómo comenzó todo?</h2>
+
+        <p>
+          Recuerdo un 29 de abril del 2025...
+        </p>
+
+        <p>
+          Ese día quedó grabado para siempre en mi memoria,
+          porque fue el día en que te conocí.
+        </p>
+
+        <p>
+          Estábamos en la escuela, como cualquier otro día,
+          pero desde que cruzamos palabras, sentí que algo
+          especial estaba comenzando.
+        </p>
+
+        <p>
+          Durante esos días que hablamos, sentí que conecté
+          contigo de una manera tan rápida y tan profunda,
+          como si la vida nos hubiera estado preparando
+          para encontrarnos.
+        </p>
+
+        <p>
+          Cada conversación contigo era una chispa que
+          encendía algo dentro de mí. Y no pasó mucho tiempo
+          antes de darme cuenta de que me estaba enamorando.
+        </p>
+
+        <p>
+          Y entonces llegó aquel martes que todavía recuerdo
+          perfectamente...
+        </p>
+
+        <p>
+          Fue el día en que nos dimos nuestro primer beso.
+          Un beso que no fue solamente un beso.
+          Fue uno de esos momentos que se quedan guardados
+          para siempre.
+        </p>
+
+        <p>
+          Recuerdo sentir que el mundo se detenía por un
+          instante y que todo tenía sentido contigo a mi lado.
+        </p>
+
+        <p>
+          Después vino aquella semana que se sintió mágica.
+          Cada día contigo era un regalo.
+        </p>
+
+        <p>
+          Y después me invitaste a tu casa.
+          Conocí a tu familia y sentí que estaba entrando
+          en una parte muy especial de tu mundo.
+        </p>
+
+        <p>
+          Y ahora, cuando miro hacia atrás y recuerdo todo
+          aquello, me doy cuenta de lo increíble que es
+          pensar que todo comenzó con una simple conversación.
+        </p>
+
+        <p>
+          Desde aquel 29 de abril nuestra historia no ha
+          dejado de escribirse.
+        </p>
+
+        <p>
+          Y todavía hoy, después de todo este tiempo,
+          sigo agradeciendo haber tenido la oportunidad
+          de conocerte.
+        </p>
+
+        <p class="final">
+          Gracias por ser tú. ❤️
+          <br>
+          Y gracias por formar parte de mi historia.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    function abrirRegalo() {
+      const historia = document.getElementById("historia");
+
+      historia.style.display = "block";
+
+      setTimeout(() => {
+        historia.scrollIntoView({
+          behavior: "smooth"
+        });
+      }, 100);
+    }
+  </script>
+
+</body>
+</html>
