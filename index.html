@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Para Romi ❤️</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     scroll-behavior:smooth;
@@ -19,12 +21,22 @@ body{
     margin:0;
     color:#fff;
     font-family:Georgia,"Times New Roman",serif;
+
     background:
-        radial-gradient(circle at 50% 0%,#172554 0%,#080b18 45%,#02030a 100%);
+    radial-gradient(
+        circle at 50% 0%,
+        #172554 0%,
+        #080b18 45%,
+        #02030a 100%
+    );
+
     overflow-x:hidden;
 }
 
-/* FONDO */
+
+/* =========================
+   ESTRELLAS
+========================= */
 
 #stars{
     position:fixed;
@@ -36,32 +48,61 @@ body{
 
 .star{
     position:absolute;
+
     width:2px;
     height:2px;
-    border-radius:50%;
+
     background:white;
+
+    border-radius:50%;
+
     opacity:.7;
-    animation:twinkle 3s infinite alternate;
+
+    animation:
+    twinkle 3s infinite alternate;
 }
 
 @keyframes twinkle{
-    from{opacity:.15;transform:scale(.7)}
-    to{opacity:1;transform:scale(1.5)}
+
+    from{
+        opacity:.15;
+        transform:scale(.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+
 }
 
-/* PARTICULAS */
+
+/* =========================
+   PARTICULAS
+========================= */
 
 .particle{
+
     position:fixed;
+
     bottom:-40px;
+
     pointer-events:none;
+
     z-index:9999;
-    animation:rise linear forwards;
+
+    animation:
+    rise linear forwards;
+
 }
 
 @keyframes rise{
+
     0%{
-        transform:translateY(0) rotate(0);
+        transform:
+        translateY(0)
+        rotate(0);
+
         opacity:0;
     }
 
@@ -70,61 +111,115 @@ body{
     }
 
     100%{
-        transform:translateY(-115vh) rotate(360deg);
+        transform:
+        translateY(-115vh)
+        rotate(360deg);
+
         opacity:0;
     }
+
 }
 
-/* SECCIONES */
+
+/* =========================
+   SECCIONES
+========================= */
 
 section{
+
     min-height:100vh;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    padding:75px 20px;
+
+    padding:
+    75px 20px;
+
     position:relative;
+
     z-index:2;
+
 }
 
 .container{
+
     width:100%;
+
     max-width:780px;
+
     text-align:center;
+
 }
 
-/* TITULOS */
+
+/* =========================
+   TITULOS
+========================= */
 
 h1{
-    font-size:clamp(42px,10vw,65px);
-    margin:15px 0;
-    text-shadow:0 0 25px rgba(147,197,253,.35);
+
+    font-size:
+    clamp(42px,10vw,65px);
+
+    margin:
+    15px 0;
+
+    text-shadow:
+    0 0 25px
+    rgba(147,197,253,.35);
+
 }
 
 h2{
-    font-size:clamp(28px,7vw,38px);
+
+    font-size:
+    clamp(28px,7vw,38px);
+
     color:#bfdbfe;
+
     margin-bottom:30px;
+
 }
 
 p{
+
     font-size:18px;
+
     line-height:1.9;
+
 }
 
 .fade{
+
     color:#cbd5e1;
+
 }
 
-/* CORAZON */
+
+/* =========================
+   CORAZON
+========================= */
 
 .main-heart{
+
     font-size:75px;
-    animation:heartbeat 1.6s infinite;
-    filter:drop-shadow(0 0 20px rgba(244,63,94,.45));
+
+    animation:
+    heartbeat 1.6s infinite;
+
+    filter:
+    drop-shadow(
+        0 0 20px
+        rgba(244,63,94,.45)
+    );
+
 }
 
 @keyframes heartbeat{
+
     0%,100%{
         transform:scale(1);
     }
@@ -132,151 +227,337 @@ p{
     50%{
         transform:scale(1.18);
     }
+
 }
 
-/* FECHA */
+
+/* =========================
+   FECHA
+========================= */
 
 .date{
+
     color:#93c5fd;
+
     font-size:20px;
+
     letter-spacing:7px;
+
     margin:28px 0;
+
 }
 
-/* FOTO */
 
-.photo{
-    width:245px;
-    height:320px;
-    margin:35px auto;
+/* =========================
+   ROSA PRINCIPAL
+========================= */
 
-    border-radius:30px;
-    overflow:hidden;
+.rose{
 
-    background:linear-gradient(145deg,#111827,#172554);
+    font-size:105px;
 
-    border:1px solid rgba(255,255,255,.18);
+    margin:30px 0;
 
-    box-shadow:
-        0 25px 80px rgba(0,0,0,.65),
-        0 0 40px rgba(59,130,246,.15);
+    filter:
+    drop-shadow(
+        0 0 30px
+        rgba(244,63,94,.25)
+    );
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    animation:
+    roseFloat 4s ease-in-out infinite;
+
 }
 
-.photo span{
-    color:#94a3b8;
-    padding:25px;
+@keyframes roseFloat{
+
+    0%,100%{
+        transform:
+        translateY(0)
+        rotate(-3deg);
+    }
+
+    50%{
+        transform:
+        translateY(-12px)
+        rotate(3deg);
+    }
+
 }
 
-/* BOTONES */
+
+/* =========================
+   BOTONES
+========================= */
 
 button{
+
     border:none;
+
     border-radius:999px;
-    padding:16px 30px;
+
+    padding:
+    16px 30px;
 
     font-size:16px;
+
     color:white;
 
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
 
-    box-shadow:0 10px 35px rgba(37,99,235,.35);
+    box-shadow:
+    0 10px 35px
+    rgba(37,99,235,.35);
 
     cursor:pointer;
+
     transition:.3s;
+
 }
 
 button:hover{
-    transform:translateY(-4px) scale(1.04);
+
+    transform:
+    translateY(-4px)
+    scale(1.04);
+
 }
 
 button:active{
-    transform:scale(.95);
+
+    transform:
+    scale(.95);
+
 }
 
-/* TARJETAS */
+
+/* =========================
+   TARJETAS
+========================= */
 
 .card{
-    background:rgba(255,255,255,.055);
 
-    border:1px solid rgba(255,255,255,.13);
+    background:
+    rgba(255,255,255,.055);
+
+    border:
+    1px solid
+    rgba(255,255,255,.13);
 
     padding:32px;
 
     border-radius:30px;
 
-    backdrop-filter:blur(15px);
+    backdrop-filter:
+    blur(15px);
 
-    box-shadow:0 25px 70px rgba(0,0,0,.4);
+    box-shadow:
+    0 25px 70px
+    rgba(0,0,0,.4);
 
     text-align:left;
 
-    animation:cardAppear .9s ease both;
+    animation:
+    cardAppear .9s ease both;
+
 }
 
 @keyframes cardAppear{
+
     from{
+
         opacity:0;
-        transform:translateY(25px);
+
+        transform:
+        translateY(25px);
+
     }
 
     to{
+
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+        translateY(0);
+
     }
+
 }
 
-/* FRASES */
+
+/* =========================
+   FRASES
+========================= */
 
 .quote{
-    margin:35px 0;
+
+    margin:
+    35px 0;
+
     padding:20px;
 
-    border-left:2px solid #60a5fa;
+    border-left:
+    2px solid
+    #60a5fa;
 
     color:#bfdbfe;
 
     font-style:italic;
 
-    background:rgba(59,130,246,.05);
+    background:
+    rgba(59,130,246,.05);
 
-    border-radius:0 15px 15px 0;
+    border-radius:
+    0 15px 15px 0;
+
 }
 
-/* TIMELINE */
+
+/* =========================
+   RECUERDOS
+========================= */
+
+.memories{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+.memory{
+
+    padding:25px;
+
+    min-height:190px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(30,41,59,.8),
+        rgba(23,37,84,.65)
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.12);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.memory:hover{
+
+    transform:
+    translateY(-7px)
+    scale(1.02);
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.35);
+
+}
+
+.memory-icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+.memory-title{
+
+    color:#bfdbfe;
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+.memory p{
+
+    font-size:15px;
+
+    color:#cbd5e1;
+
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
 
 .timeline{
-    border-left:2px solid #3b82f6;
+
+    border-left:
+    2px solid
+    #3b82f6;
+
     padding-left:28px;
+
 }
 
 .event{
+
     margin-bottom:45px;
+
     position:relative;
+
 }
 
 .event:before{
+
     content:"❤️";
 
     position:absolute;
 
     left:-42px;
+
     top:0;
 
     font-size:17px;
+
 }
 
 .event strong{
+
     color:#93c5fd;
+
     font-size:20px;
+
 }
 
-/* CONTADOR */
+
+/* =========================
+   CONTADOR
+========================= */
 
 .counter{
+
     text-align:center;
 
     font-size:27px;
@@ -284,316 +565,515 @@ button:active{
     color:#bfdbfe;
 
     margin:30px 0;
+
 }
 
-/* GALERIA */
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin-top:25px;
+/* =========================
+   CARTA
+========================= */
+
+.letter{
+
+    position:relative;
+
+    padding:35px 25px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(30,41,59,.55)
+    );
+
+    border:
+    1px solid
+    rgba(255,255,255,.13);
+
 }
 
-.gallery-item{
-    height:180px;
+.letter:before{
 
-    border-radius:22px;
+    content:"💌";
 
-    background:linear-gradient(145deg,#111827,#172554);
+    display:block;
 
-    border:1px solid rgba(255,255,255,.14);
+    font-size:45px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    margin-bottom:15px;
 
-    color:#94a3b8;
-
-    transition:.4s;
 }
 
-.gallery-item:hover{
-    transform:scale(1.03);
-}
 
-/* DECORACIONES */
+/* =========================
+   DECORACIONES
+========================= */
 
 .decor{
+
     position:absolute;
+
     font-size:30px;
+
     opacity:.65;
+
     pointer-events:none;
 
-    animation:float 5s ease-in-out infinite;
+    animation:
+    float 5s ease-in-out infinite;
+
 }
 
 .decor1{
+
     top:15%;
     left:8%;
+
 }
 
 .decor2{
+
     top:40%;
     right:8%;
+
     animation-delay:1s;
+
 }
 
 .decor3{
+
     bottom:15%;
     left:10%;
+
     animation-delay:2s;
+
 }
 
 .decor4{
+
     bottom:25%;
     right:10%;
+
     animation-delay:3s;
+
 }
 
 @keyframes float{
+
     0%,100%{
-        transform:translateY(0) rotate(0);
+
+        transform:
+        translateY(0)
+        rotate(0);
+
     }
 
     50%{
-        transform:translateY(-18px) rotate(8deg);
+
+        transform:
+        translateY(-18px)
+        rotate(8deg);
+
     }
+
 }
 
-/* SECRETOS */
+
+/* =========================
+   SECRETOS
+========================= */
 
 .secret-object{
+
     position:absolute;
+
     font-size:27px;
+
     cursor:pointer;
+
     z-index:20;
+
     transition:.3s;
+
 }
 
 .secret-object:hover{
-    transform:scale(1.4);
+
+    transform:
+    scale(1.4);
+
 }
 
-/* SORPRESA */
+
+/* =========================
+   SORPRESA
+========================= */
 
 .secret{
+
     display:none;
+
     margin-top:35px;
-    animation:appear 1.2s ease;
+
+    animation:
+    appear 1.2s ease;
+
 }
 
 @keyframes appear{
+
     from{
+
         opacity:0;
-        transform:translateY(30px);
+
+        transform:
+        translateY(30px);
+
     }
 
     to{
+
         opacity:1;
-        transform:translateY(0);
+
+        transform:
+        translateY(0);
+
     }
+
 }
 
-/* MODAL */
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+
+    text-align:center;
+
+    font-size:25px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================
+   MODAL
+========================= */
 
 .modal{
+
     display:none;
 
     position:fixed;
+
     inset:0;
 
-    background:rgba(0,0,0,.82);
+    background:
+    rgba(0,0,0,.82);
 
     z-index:99999;
 
     align-items:center;
+
     justify-content:center;
 
     padding:25px;
+
 }
 
 .modal-box{
+
     max-width:500px;
+
     width:100%;
 
     padding:35px;
 
     border-radius:30px;
 
-    background:linear-gradient(145deg,#0f172a,#172554);
+    background:
+    linear-gradient(
+        145deg,
+        #0f172a,
+        #172554
+    );
 
-    border:1px solid rgba(255,255,255,.2);
+    border:
+    1px solid
+    rgba(255,255,255,.2);
 
     text-align:center;
 
-    box-shadow:0 30px 100px rgba(0,0,0,.7);
+    box-shadow:
+    0 30px 100px
+    rgba(0,0,0,.7);
 
-    animation:modalIn .5s ease;
+    animation:
+    modalIn .5s ease;
+
 }
 
 @keyframes modalIn{
+
     from{
+
         opacity:0;
-        transform:scale(.8);
+
+        transform:
+        scale(.8);
+
     }
 
     to{
+
         opacity:1;
-        transform:scale(1);
+
+        transform:
+        scale(1);
+
     }
+
 }
 
-/* FINAL */
 
-.final{
-    text-align:center;
-    font-size:25px;
-    line-height:1.8;
-}
-
-/* CELULAR */
+/* =========================
+   CELULAR
+========================= */
 
 @media(max-width:600px){
 
     section{
-        padding:70px 17px;
+
+        padding:
+        70px 17px;
+
     }
 
     .card{
+
         padding:24px;
+
     }
 
     p{
+
         font-size:17px;
+
     }
 
-    .gallery{
+    .memories{
+
         grid-template-columns:1fr;
+
     }
 
-    .gallery-item{
-        height:200px;
+    .memory{
+
+        min-height:170px;
+
     }
 
     .decor{
+
         font-size:22px;
+
+    }
+
+    .rose{
+
+        font-size:85px;
+
     }
 
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <!-- ESTRELLAS -->
+
 <div id="stars"></div>
 
+
 <!-- DECORACIONES -->
+
 <div class="decor decor1">✨</div>
+
 <div class="decor decor2">🌙</div>
+
 <div class="decor decor3">💫</div>
+
 <div class="decor decor4">🌹</div>
 
+
 <!-- SECRETOS -->
-<div
-    class="secret-object"
-    style="top:22%;left:6%;"
-    onclick="secret('estrella')">
-    ⭐
-</div>
 
 <div
-    class="secret-object"
-    style="top:65%;right:6%;"
-    onclick="secret('corazon')">
-    ❤️
-</div>
+class="secret-object"
+style="top:22%;left:6%;"
+onclick="secret('estrella')">
 
-<div
-    class="secret-object"
-    style="top:87%;left:8%;"
-    onclick="secret('rosa')">
-    🌹
+⭐
+
 </div>
 
 
-<!-- PORTADA -->
+<div
+class="secret-object"
+style="top:65%;right:6%;"
+onclick="secret('corazon')">
+
+❤️
+
+</div>
+
+
+<div
+class="secret-object"
+style="top:87%;left:8%;"
+onclick="secret('rosa')">
+
+🌹
+
+</div>
+
+
+<!-- =========================
+     PORTADA
+========================= -->
 
 <section>
 
 <div class="container">
 
-<div class="main-heart">❤️</div>
 
-<h1>Para ti, Romi</h1>
+<div class="main-heart">
+❤️
+</div>
+
+
+<h1>
+Para ti, Romi
+</h1>
+
 
 <p class="fade">
+
 Hay historias que comienzan sin saber
 que algún día cambiarán nuestras vidas.
+
 </p>
+
 
 <div class="date">
+
 29 · 04 · 2025
+
 </div>
 
-<div class="photo">
-<span>
-Aquí irá tu foto ❤️
-</span>
+
+<div class="rose">
+
+🌹
+
 </div>
 
-<button onclick="openGift()">
-Abrir mi regalo ✨
-</button>
 
 <p class="fade">
-Hecho especialmente para ti.
+
+Una pequeña historia
+hecha especialmente para ti.
+
 </p>
+
+
+<button onclick="openGift()">
+
+Abrir mi regalo ✨
+
+</button>
+
+
+<p class="fade">
+
+Con todo mi corazón.
+
+</p>
+
 
 </div>
 
 </section>
 
 
-<!-- INTRO -->
+<!-- =========================
+     INTRO
+========================= -->
 
 <section id="historia">
 
 <div class="container">
 
+
 <h2>
+
 ¿Te acuerdas? ❤️
+
 </h2>
+
 
 <div class="card">
 
+
 <p>
+
 A veces me gusta recordar cómo comenzó todo.
+
 </p>
 
+
 <div class="quote">
+
 "Porque algunas historias comienzan
 sin que nos demos cuenta."
+
 </div>
 
+
 <p>
+
 No porque quiera quedarme en el pasado,
 sino porque cuando miro todo lo que hemos vivido,
 me parece increíble pensar que alguna vez
 solo éramos dos personas que todavía no sabían
 lo importantes que llegarían a ser el uno para el otro.
+
 </p>
 
+
 <p>
+
 Y cada vez que recuerdo aquel
 <strong>29 de abril de 2025</strong>,
 sonrío.
+
 </p>
 
+
 <p>
+
 Porque ese día te conocí.
+
 </p>
+
 
 </div>
 
@@ -602,93 +1082,139 @@ Porque ese día te conocí.
 </section>
 
 
-<!-- HISTORIA -->
+<!-- =========================
+     HISTORIA
+========================= -->
 
 <section>
 
 <div class="container">
 
+
 <h2>
+
 Nuestra historia 📖
+
 </h2>
+
 
 <div class="card">
 
-<p>
-Recuerdo un 29 de abril del 2025...
-</p>
 
 <p>
+
+Recuerdo un 29 de abril del 2025...
+
+</p>
+
+
+<p>
+
 Ese día quedó grabado para siempre en mi memoria,
 porque fue el día en que te conocí.
 Estábamos en la escuela, como cualquier otro día,
 pero desde que cruzamos palabras, sentí que algo
 especial estaba comenzando.
+
 </p>
 
+
 <p>
+
 Durante esos días que hablamos, sentí que conecté
 contigo de una manera tan rápida y tan profunda,
 como si la vida nos hubiera estado preparando
 para encontrarnos.
+
 </p>
 
+
 <div class="quote">
+
 "Y sin saberlo, ese día acabábamos de comenzar
 una historia que todavía seguimos escribiendo."
+
 </div>
 
+
 <p>
+
 Cada conversación contigo era una chispa que
 encendía algo dentro de mí.
 Y no pasó mucho tiempo antes de darme cuenta
 de que me estaba enamorando.
+
 </p>
 
+
 <p>
+
 Y entonces llegó aquel martes.
 El día de nuestro primer beso.
+
 </p>
 
+
 <p>
+
 Todavía recuerdo ese momento.
 No fue solamente un beso.
 Fue uno de esos instantes que se quedan
 guardados para siempre.
+
 </p>
 
+
 <p>
+
 Sentí que el mundo se detenía durante un instante
 y que todo tenía sentido contigo a mi lado.
+
 </p>
 
+
 <p>
+
 Después vino aquella semana que se sintió mágica.
 Cada día contigo era un regalo.
+
 </p>
 
+
 <p>
+
 Y entonces me invitaste a tu casa.
 Conocí a tu familia y sentí que estaba entrando
 en una parte muy especial de tu mundo.
+
 </p>
 
+
 <p>
+
 Y ahora, cuando miro hacia atrás,
 me doy cuenta de lo increíble que es pensar
 que todo comenzó con una conversación.
+
 </p>
 
+
 <p>
+
 Desde aquel día nuestra historia no ha dejado
 de escribirse.
+
 </p>
 
+
 <p>
+
 Y aunque han pasado muchas cosas desde entonces,
 hay algo que sigue igual:
 me alegra muchísimo haberte conocido.
+
 </p>
+
 
 </div>
 
@@ -697,85 +1223,269 @@ me alegra muchísimo haberte conocido.
 </section>
 
 
-<!-- LINEA DEL TIEMPO -->
+<!-- =========================
+     RECUERDOS
+========================= -->
 
 <section>
 
 <div class="container">
 
+
 <h2>
-Nuestra pequeña historia 🕰️
+
+Nuestros recuerdos ✨
+
 </h2>
+
 
 <div class="card">
 
+
+<p style="text-align:center;">
+
+No necesito una fotografía para recordar
+los momentos que hicieron especial
+nuestra historia.
+
+</p>
+
+
+<p style="text-align:center;" class="fade">
+
+Porque algunos recuerdos
+se quedan guardados en el corazón.
+
+</p>
+
+
+<div class="memories">
+
+
+<div class="memory">
+
+<div class="memory-icon">
+🌱
+</div>
+
+<div class="memory-title">
+
+El comienzo
+
+</div>
+
+<p>
+
+29 de abril de 2025.
+El día en que nuestras vidas
+se cruzaron.
+
+</p>
+
+</div>
+
+
+<div class="memory">
+
+<div class="memory-icon">
+❤️
+</div>
+
+<div class="memory-title">
+
+Nuestro primer beso
+
+</div>
+
+<p>
+
+Aquel martes que convirtió
+un momento cualquiera
+en un recuerdo eterno.
+
+</p>
+
+</div>
+
+
+<div class="memory">
+
+<div class="memory-icon">
+🏡
+</div>
+
+<div class="memory-title">
+
+Conocí tu mundo
+
+</div>
+
+<p>
+
+El día que me invitaste a tu casa
+y pude conocer una parte
+más de ti.
+
+</p>
+
+</div>
+
+
+<div class="memory">
+
+<div class="memory-icon">
+✨
+</div>
+
+<div class="memory-title">
+
+Todo lo que vino después
+
+</div>
+
+<p>
+
+Las risas, los abrazos,
+las conversaciones
+y todos los momentos
+que todavía nos faltan.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="quote">
+
+"Algunos momentos no necesitan
+una fotografía para ser inolvidables."
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<section>
+
+<div class="container">
+
+
+<h2>
+
+Nuestra pequeña historia 🕰️
+
+</h2>
+
+
+<div class="card">
+
+
 <div class="timeline">
 
+
 <div class="event">
 
 <strong>
+
 29 de abril de 2025
+
 </strong>
 
 <p>
-El día en que nuestras vidas se cruzaron.
+
+El día en que nuestras vidas
+se cruzaron.
+
 </p>
 
 </div>
 
+
 <div class="event">
 
 <strong>
+
 Nuestros primeros días
+
 </strong>
 
 <p>
+
 Unas conversaciones que terminaron
 convirtiéndose en algo mucho más grande.
+
 </p>
 
 </div>
 
+
 <div class="event">
 
 <strong>
+
 Nuestro primer beso ❤️
+
 </strong>
 
 <p>
+
 Ese martes que todavía vive
 en mis recuerdos.
+
 </p>
 
 </div>
 
+
 <div class="event">
 
 <strong>
+
 El día que conocí tu mundo
+
 </strong>
 
 <p>
+
 Cuando me invitaste a tu casa
 y conocí a tu familia.
+
 </p>
 
 </div>
 
+
 <div class="event">
 
 <strong>
+
 Todo lo que vino después
+
 </strong>
 
 <p>
+
 Las risas, los abrazos,
 los momentos difíciles,
 los momentos bonitos
 y todo lo que seguimos escribiendo.
+
 </p>
 
 </div>
+
 
 </div>
 
@@ -786,32 +1496,48 @@ y todo lo que seguimos escribiendo.
 </section>
 
 
-<!-- CONTADOR -->
+<!-- =========================
+     CONTADOR
+========================= -->
 
 <section>
 
 <div class="container">
 
+
 <h2>
+
 Mira cuánto tiempo ha pasado... ⏳
+
 </h2>
 
+
 <div class="card">
+
 
 <p style="text-align:center;">
+
 Desde aquel 29 de abril de 2025...
+
 </p>
+
 
 <div
-    class="counter"
-    id="counter">
+class="counter"
+id="counter">
+
 Cargando...
+
 </div>
+
 
 <p style="text-align:center;" class="fade">
+
 Y todavía nos queda muchísimo
 por vivir. ❤️
+
 </p>
+
 
 </div>
 
@@ -820,123 +1546,116 @@ por vivir. ❤️
 </section>
 
 
-<!-- RECUERDOS -->
+<!-- =========================
+     CARTA
+========================= -->
 
 <section>
 
 <div class="container">
 
-<h2>
-Nuestros recuerdos 📸
-</h2>
-
-<div class="card">
-
-<p>
-Hay momentos que merecen quedarse
-guardados para siempre.
-</p>
-
-<p>
-Estos espacios están esperando
-nuestros recuerdos. ❤️
-</p>
-
-<div class="gallery">
-
-<div class="gallery-item">
-📸 Foto 1
-</div>
-
-<div class="gallery-item">
-📸 Foto 2
-</div>
-
-<div class="gallery-item">
-📸 Foto 3
-</div>
-
-<div class="gallery-item">
-📸 Foto 4
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CARTA -->
-
-<section>
-
-<div class="container">
 
 <h2>
+
 Algo que quiero decirte 💌
+
 </h2>
+
 
 <div class="card">
 
-<p>
-Romi...
-</p>
+
+<div class="letter">
+
 
 <p>
+
+Romi...
+
+</p>
+
+
+<p>
+
 Después de todo este tiempo,
 hay algo que quiero que nunca olvides.
+
 </p>
 
+
 <p>
+
 Gracias por existir y por haber llegado
 a mi vida de una manera que jamás imaginé.
+
 </p>
 
+
 <p>
+
 Gracias por cada risa, cada abrazo,
 cada mirada, cada conversación
 y cada momento que hemos compartido.
+
 </p>
 
+
 <p>
+
 Cuando pienso en nosotros,
 no pienso solamente en aquel primer beso
 o en aquel primer día.
+
 </p>
 
+
 <p>
+
 Pienso en todo lo que vino después.
 En todo lo que hemos aprendido,
 en todo lo que hemos vivido
 y en todos esos pequeños momentos
 que quizá parecen simples,
 pero que para mí significan muchísimo.
+
 </p>
 
+
 <div class="quote">
+
 "Lo bonito no siempre está en los grandes momentos,
 sino en todo aquello que terminamos guardando
 sin darnos cuenta."
+
 </div>
 
+
 <p>
+
 No sé exactamente qué nos espera en el futuro,
 pero sí sé algo:
 me alegra que seas parte de mi presente.
+
 </p>
 
+
 <p>
+
 Y si algún día vuelves a esta página,
 quiero que recuerdes que fue hecha
 pensando solamente en ti.
+
 </p>
 
+
 <p class="final">
+
 Te quiero muchísimo, Romi. ❤️
+
 </p>
+
+
+</div>
 
 </div>
 
@@ -945,44 +1664,70 @@ Te quiero muchísimo, Romi. ❤️
 </section>
 
 
-<!-- CANCION -->
+<!-- =========================
+     CANCION
+========================= -->
 
 <section>
 
 <div class="container">
 
+
 <h2>
+
 Nuestra canción 🎵
+
 </h2>
+
 
 <div class="card" style="text-align:center;">
 
+
 <div style="font-size:60px;">
+
 🎶
+
 </div>
 
-<p>
-Hay canciones que simplemente suenan bonitas.
-</p>
 
 <p>
+
+Hay canciones que simplemente suenan bonitas.
+
+</p>
+
+
+<p>
+
 Y hay otras que terminan teniendo
 un significado especial.
+
 </p>
 
+
 <p>
+
 Esta es nuestra canción.
+
 </p>
+
 
 <br>
 
+
 <button onclick="playSong()">
+
 ▶️ Can't Help Falling in Love
+
 </button>
 
+
 <p class="fade">
+
 Elvis Presley ❤️
+
 </p>
+
 
 </div>
 
@@ -991,54 +1736,86 @@ Elvis Presley ❤️
 </section>
 
 
-<!-- SORPRESA -->
+<!-- =========================
+     SORPRESA
+========================= -->
 
 <section>
 
 <div class="container">
 
+
 <h2>
+
 ¿Creías que ya había terminado? 👀
+
 </h2>
+
 
 <div class="card" style="text-align:center;">
 
+
 <div style="font-size:55px;">
+
 🔐
+
 </div>
 
-<p>
-Todavía queda algo escondido.
-</p>
 
 <p>
+
+Todavía queda algo escondido.
+
+</p>
+
+
+<p>
+
 Quizá ya encontraste alguna de las pequeñas
 sorpresas que dejé por aquí...
+
 </p>
 
+
 <p>
+
 Pero todavía falta una última cosa.
+
 </p>
+
 
 <button onclick="showFinal()">
+
 Desbloquear sorpresa ❤️
+
 </button>
 
+
 <div
-    class="secret"
-    id="finalSecret">
+class="secret"
+id="finalSecret">
+
 
 <p>
+
 Si llegaste hasta aquí...
+
 </p>
 
+
 <p>
+
 significa que leíste todo.
+
 </p>
 
+
 <p>
+
 Y quiero que recuerdes algo:
+
 </p>
+
 
 <p class="final">
 
@@ -1054,11 +1831,17 @@ al recordar que aquel
 
 <br><br>
 
+🌹
+
+<br><br>
+
 ❤️
 
 </p>
 
+
 </div>
+
 
 </div>
 
@@ -1067,19 +1850,35 @@ al recordar que aquel
 </section>
 
 
-<!-- FINAL -->
+<!-- =========================
+     FINAL
+========================= -->
 
 <section>
 
 <div class="container">
 
-<div class="main-heart">
-❤️
+
+<div class="rose">
+
+🌹
+
 </div>
 
+
+<div class="main-heart">
+
+❤️
+
+</div>
+
+
 <h2>
+
 Gracias por existir.
+
 </h2>
+
 
 <p class="final">
 
@@ -1094,16 +1893,21 @@ por escribir.
 <br><br>
 
 <strong>
+
 Te quiero, Romi.
+
 </strong>
 
 <br><br>
 
 <span class="fade">
+
 — Con todo mi corazón.
+
 </span>
 
 </p>
+
 
 </div>
 
@@ -1113,21 +1917,31 @@ Te quiero, Romi.
 <!-- MODAL -->
 
 <div
-    class="modal"
-    id="modal">
+class="modal"
+id="modal">
+
 
 <div class="modal-box">
 
+
 <h2 id="modalTitle">
+
 ✨
+
 </h2>
 
+
 <p id="modalText">
+
 </p>
 
+
 <button onclick="closeModal()">
+
 Cerrar ❤️
+
 </button>
+
 
 </div>
 
@@ -1136,32 +1950,39 @@ Cerrar ❤️
 
 <script>
 
-/* ESTRELLAS */
 
-const stars=
+/* =========================
+   ESTRELLAS
+========================= */
+
+const stars =
 document.getElementById("stars");
+
 
 for(let i=0;i<120;i++){
 
-    const star=
+    const star =
     document.createElement("div");
 
     star.className="star";
 
-    star.style.left=
+    star.style.left =
     Math.random()*100+"vw";
 
-    star.style.top=
+    star.style.top =
     Math.random()*100+"vh";
 
-    star.style.animationDelay=
+    star.style.animationDelay =
     Math.random()*4+"s";
 
     stars.appendChild(star);
+
 }
 
 
-/* ABRIR REGALO */
+/* =========================
+   ABRIR REGALO
+========================= */
 
 function openGift(){
 
@@ -1169,219 +1990,24 @@ function openGift(){
 
     setTimeout(function(){
 
-        const historia=
+        const historia =
         document.getElementById("historia");
 
         historia.scrollIntoView({
+
             behavior:"smooth",
+
             block:"start"
+
         });
 
     },600);
+
 }
 
 
-/* PARTICULAS */
-
-function createParticles(number){
-
-    const symbols=[
-        "❤️",
-        "✨",
-        "💙",
-        "💫",
-        "🤍"
-    ];
-
-    for(let i=0;i<number;i++){
-
-        const particle=
-        document.createElement("div");
-
-        particle.className="particle";
-
-        particle.innerHTML=
-        symbols[
-            Math.floor(
-                Math.random()*symbols.length
-            )
-        ];
-
-        particle.style.left=
-        Math.random()*100+"vw";
-
-        particle.style.fontSize=
-        (15+Math.random()*25)+"px";
-
-        particle.style.animationDuration=
-        (2.5+Math.random()*3)+"s";
-
-        document.body.appendChild(particle);
-
-        setTimeout(function(){
-
-            particle.remove();
-
-        },6000);
-    }
-}
-
-
-/* CONTADOR */
-
-const startDate=
-new Date("2025-04-29T00:00:00");
-
-function updateCounter(){
-
-    const now=
-    new Date();
-
-    const difference=
-    now-startDate;
-
-    const days=
-    Math.floor(
-        difference/
-        (1000*60*60*24)
-    );
-
-    const hours=
-    Math.floor(
-        difference/
-        (1000*60*60)
-    )%24;
-
-    const minutes=
-    Math.floor(
-        difference/
-        (1000*60)
-    )%60;
-
-    document
-    .getElementById("counter")
-    .innerHTML=
-        days+
-        " días<br>"+
-        hours+
-        " horas · "+
-        minutes+
-        " minutos ❤️";
-}
-
-updateCounter();
-
-setInterval(
-    updateCounter,
-    60000
-);
-
-
-/* CANCION */
-
-function playSong(){
-
-    window.open(
-        "https://youtu.be/eTKeQhYVvbQ?si=P4biGYYU5Fz4RpDZ",
-        "_blank"
-    );
-}
-
-
-/* SECRETOS */
-
-let found=[];
-
-function secret(type){
-
-    if(found.includes(type)){
-        return;
-    }
-
-    found.push(type);
-
-    let title="";
-    let text="";
-
-    if(type==="estrella"){
-
-        title="Encontraste una estrella ⭐";
-
-        text=
-        "Hay personas que llegan a nuestra vida y hacen que todo brille un poquito más.";
-    }
-
-    if(type==="corazon"){
-
-        title="Encontraste un corazón ❤️";
-
-        text=
-        "Este representa todos esos momentos que guardo con muchísimo cariño.";
-    }
-
-    if(type==="rosa"){
-
-        title="Encontraste una rosa 🌹";
-
-        text=
-        "Porque algunas cosas bonitas merecen quedarse guardadas para siempre.";
-    }
-
-    document
-    .getElementById("modalTitle")
-    .innerHTML=title;
-
-    document
-    .getElementById("modalText")
-    .innerHTML=text;
-
-    document
-    .getElementById("modal")
-    .style.display="flex";
-
-    if(found.length===3){
-
-        setTimeout(function(){
-
-            createParticles(30);
-
-        },700);
-    }
-}
-
-
-/* CERRAR MODAL */
-
-function closeModal(){
-
-    document
-    .getElementById("modal")
-    .style.display="none";
-}
-
-
-/* SORPRESA FINAL */
-
-function showFinal(){
-
-    const final=
-    document.getElementById("finalSecret");
-
-    final.style.display="block";
-
-    createParticles(45);
-
-    setTimeout(function(){
-
-        final.scrollIntoView({
-            behavior:"smooth",
-            block:"center"
-        });
-
-    },400);
-}
-
-</script>
-
-</body>
-</html>
+/* =========================
+   PARTICULAS
+========================= */
+
+function createParticl
