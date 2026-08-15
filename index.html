@@ -1324,18 +1324,29 @@ function openGift(){
 
     createParticles(35);
 
+    const historia = document.getElementById("historia");
+
+    const card = historia.querySelector(".card");
+    const quote = historia.querySelector(".quote");
+
+    if(card){
+        card.classList.add("visible");
+    }
+
+    if(quote){
+        quote.classList.add("visible");
+    }
+
     setTimeout(()=>{
 
-        document
-        .getElementById("historia")
-        .scrollIntoView({
-            behavior:"smooth"
+        historia.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
         });
 
     },700);
 
 }
-
 
 /* =========================
    PARTICULAS
