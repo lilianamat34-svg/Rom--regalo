@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Para Romi ❤️</title>
 
 <style>
-
 *{
     box-sizing:border-box;
     scroll-behavior:smooth;
@@ -19,16 +17,14 @@ html{
 
 body{
     margin:0;
-    background:
-    radial-gradient(circle at 50% 0%,#172554 0%,#080b18 42%,#02030a 100%);
     color:#fff;
     font-family:Georgia,"Times New Roman",serif;
+    background:
+        radial-gradient(circle at 50% 0%,#172554 0%,#080b18 45%,#02030a 100%);
     overflow-x:hidden;
 }
 
-/* =========================
-   FONDO
-========================= */
+/* FONDO */
 
 #stars{
     position:fixed;
@@ -42,8 +38,8 @@ body{
     position:absolute;
     width:2px;
     height:2px;
-    background:white;
     border-radius:50%;
+    background:white;
     opacity:.7;
     animation:twinkle 3s infinite alternate;
 }
@@ -53,21 +49,19 @@ body{
     to{opacity:1;transform:scale(1.5)}
 }
 
-/* =========================
-   PARTICULAS
-========================= */
+/* PARTICULAS */
 
 .particle{
     position:fixed;
-    bottom:-30px;
+    bottom:-40px;
     pointer-events:none;
-    z-index:5;
+    z-index:9999;
     animation:rise linear forwards;
 }
 
 @keyframes rise{
     0%{
-        transform:translateY(0) rotate(0deg);
+        transform:translateY(0) rotate(0);
         opacity:0;
     }
 
@@ -76,23 +70,19 @@ body{
     }
 
     100%{
-        transform:
-        translateY(-115vh)
-        rotate(360deg);
+        transform:translateY(-115vh) rotate(360deg);
         opacity:0;
     }
 }
 
-/* =========================
-   SECCIONES
-========================= */
+/* SECCIONES */
 
 section{
     min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:80px 20px;
+    padding:75px 20px;
     position:relative;
     z-index:2;
 }
@@ -103,15 +93,12 @@ section{
     text-align:center;
 }
 
-/* =========================
-   TITULOS
-========================= */
+/* TITULOS */
 
 h1{
     font-size:clamp(42px,10vw,65px);
     margin:15px 0;
-    text-shadow:
-    0 0 20px rgba(147,197,253,.35);
+    text-shadow:0 0 25px rgba(147,197,253,.35);
 }
 
 h2{
@@ -129,9 +116,7 @@ p{
     color:#cbd5e1;
 }
 
-/* =========================
-   CORAZON PRINCIPAL
-========================= */
+/* CORAZON */
 
 .main-heart{
     font-size:75px;
@@ -149,9 +134,7 @@ p{
     }
 }
 
-/* =========================
-   FECHA
-========================= */
+/* FECHA */
 
 .date{
     color:#93c5fd;
@@ -160,29 +143,23 @@ p{
     margin:28px 0;
 }
 
-/* =========================
-   FOTO
-========================= */
+/* FOTO */
 
 .photo{
     width:245px;
     height:320px;
     margin:35px auto;
+
     border-radius:30px;
     overflow:hidden;
 
-    background:
-    linear-gradient(
-        145deg,
-        #111827,
-        #172554
-    );
+    background:linear-gradient(145deg,#111827,#172554);
 
     border:1px solid rgba(255,255,255,.18);
 
     box-shadow:
-    0 25px 80px rgba(0,0,0,.65),
-    0 0 40px rgba(59,130,246,.15);
+        0 25px 80px rgba(0,0,0,.65),
+        0 0 40px rgba(59,130,246,.15);
 
     display:flex;
     align-items:center;
@@ -194,25 +171,19 @@ p{
     padding:25px;
 }
 
-/* =========================
-   BOTONES
-========================= */
+/* BOTONES */
 
 button{
     border:none;
     border-radius:999px;
     padding:16px 30px;
+
     font-size:16px;
     color:white;
-    background:
-    linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
 
-    box-shadow:
-    0 10px 35px rgba(37,99,235,.35);
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+
+    box-shadow:0 10px 35px rgba(37,99,235,.35);
 
     cursor:pointer;
     transition:.3s;
@@ -226,16 +197,12 @@ button:active{
     transform:scale(.95);
 }
 
-/* =========================
-   TARJETAS
-========================= */
+/* TARJETAS */
 
 .card{
-    background:
-    rgba(255,255,255,.055);
+    background:rgba(255,255,255,.055);
 
-    border:
-    1px solid rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.13);
 
     padding:32px;
 
@@ -243,55 +210,43 @@ button:active{
 
     backdrop-filter:blur(15px);
 
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.4);
+    box-shadow:0 25px 70px rgba(0,0,0,.4);
 
     text-align:left;
 
-    opacity:0;
-    transform:translateY(50px);
-
-    transition:
-    opacity 1s ease,
-    transform 1s ease;
+    animation:cardAppear .9s ease both;
 }
 
-.card.visible{
-    opacity:1;
-    transform:translateY(0);
+@keyframes cardAppear{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-/* =========================
-   FRASES
-========================= */
+/* FRASES */
 
 .quote{
     margin:35px 0;
     padding:20px;
 
-    border-left:
-    2px solid #60a5fa;
+    border-left:2px solid #60a5fa;
 
     color:#bfdbfe;
 
     font-style:italic;
 
-    opacity:0;
-    transform:translateX(-20px);
+    background:rgba(59,130,246,.05);
 
-    transition:
-    opacity 1s ease,
-    transform 1s ease;
+    border-radius:0 15px 15px 0;
 }
 
-.quote.visible{
-    opacity:1;
-    transform:translateX(0);
-}
-
-/* =========================
-   LINEA DEL TIEMPO
-========================= */
+/* TIMELINE */
 
 .timeline{
     border-left:2px solid #3b82f6;
@@ -319,9 +274,7 @@ button:active{
     font-size:20px;
 }
 
-/* =========================
-   CONTADOR
-========================= */
+/* CONTADOR */
 
 .counter{
     text-align:center;
@@ -333,9 +286,7 @@ button:active{
     margin:30px 0;
 }
 
-/* =========================
-   GALERIA
-========================= */
+/* GALERIA */
 
 .gallery{
     display:grid;
@@ -349,15 +300,9 @@ button:active{
 
     border-radius:22px;
 
-    background:
-    linear-gradient(
-        145deg,
-        #111827,
-        #172554
-    );
+    background:linear-gradient(145deg,#111827,#172554);
 
-    border:
-    1px solid rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.14);
 
     display:flex;
     align-items:center;
@@ -372,14 +317,12 @@ button:active{
     transform:scale(1.03);
 }
 
-/* =========================
-   DECORACIONES
-========================= */
+/* DECORACIONES */
 
 .decor{
     position:absolute;
     font-size:30px;
-    opacity:.6;
+    opacity:.65;
     pointer-events:none;
 
     animation:float 5s ease-in-out infinite;
@@ -410,26 +353,21 @@ button:active{
 
 @keyframes float{
     0%,100%{
-        transform:translateY(0) rotate(0deg);
+        transform:translateY(0) rotate(0);
     }
 
     50%{
-        transform:
-        translateY(-18px)
-        rotate(8deg);
+        transform:translateY(-18px) rotate(8deg);
     }
 }
 
-/* =========================
-   OBJETOS SECRETOS
-========================= */
+/* SECRETOS */
 
 .secret-object{
     position:absolute;
     font-size:27px;
     cursor:pointer;
-    z-index:10;
-
+    z-index:20;
     transition:.3s;
 }
 
@@ -437,16 +375,12 @@ button:active{
     transform:scale(1.4);
 }
 
-/* =========================
-   SORPRESA
-========================= */
+/* SORPRESA */
 
 .secret{
     display:none;
     margin-top:35px;
-
-    animation:
-    appear 1.4s ease;
+    animation:appear 1.2s ease;
 }
 
 @keyframes appear{
@@ -461,19 +395,7 @@ button:active{
     }
 }
 
-/* =========================
-   FINAL
-========================= */
-
-.final{
-    text-align:center;
-    font-size:25px;
-    line-height:1.8;
-}
-
-/* =========================
-   MODAL
-========================= */
+/* MODAL */
 
 .modal{
     display:none;
@@ -481,8 +403,7 @@ button:active{
     position:fixed;
     inset:0;
 
-    background:
-    rgba(0,0,0,.82);
+    background:rgba(0,0,0,.82);
 
     z-index:99999;
 
@@ -500,20 +421,13 @@ button:active{
 
     border-radius:30px;
 
-    background:
-    linear-gradient(
-        145deg,
-        #0f172a,
-        #172554
-    );
+    background:linear-gradient(145deg,#0f172a,#172554);
 
-    border:
-    1px solid rgba(255,255,255,.2);
+    border:1px solid rgba(255,255,255,.2);
 
     text-align:center;
 
-    box-shadow:
-    0 30px 100px rgba(0,0,0,.7);
+    box-shadow:0 30px 100px rgba(0,0,0,.7);
 
     animation:modalIn .5s ease;
 }
@@ -530,9 +444,15 @@ button:active{
     }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* FINAL */
+
+.final{
+    text-align:center;
+    font-size:25px;
+    line-height:1.8;
+}
+
+/* CELULAR */
 
 @media(max-width:600px){
 
@@ -561,65 +481,52 @@ button:active{
     }
 
 }
-
 </style>
 </head>
-
 
 <body>
 
 <!-- ESTRELLAS -->
-
 <div id="stars"></div>
 
-
 <!-- DECORACIONES -->
-
 <div class="decor decor1">✨</div>
 <div class="decor decor2">🌙</div>
 <div class="decor decor3">💫</div>
 <div class="decor decor4">🌹</div>
 
-
 <!-- SECRETOS -->
-
 <div
-class="secret-object"
-style="top:22%;left:6%;"
-onclick="secret('estrella')">
-⭐
+    class="secret-object"
+    style="top:22%;left:6%;"
+    onclick="secret('estrella')">
+    ⭐
 </div>
 
 <div
-class="secret-object"
-style="top:65%;right:6%;"
-onclick="secret('corazon')">
-❤️
+    class="secret-object"
+    style="top:65%;right:6%;"
+    onclick="secret('corazon')">
+    ❤️
 </div>
 
 <div
-class="secret-object"
-style="top:87%;left:8%;"
-onclick="secret('rosa')">
-🌹
+    class="secret-object"
+    style="top:87%;left:8%;"
+    onclick="secret('rosa')">
+    🌹
 </div>
 
 
-<!-- =========================
-     PORTADA
-========================= -->
+<!-- PORTADA -->
 
 <section>
 
 <div class="container">
 
-<div class="main-heart">
-❤️
-</div>
+<div class="main-heart">❤️</div>
 
-<h1>
-Para ti, Romi
-</h1>
+<h1>Para ti, Romi</h1>
 
 <p class="fade">
 Hay historias que comienzan sin saber
@@ -631,11 +538,9 @@ que algún día cambiarán nuestras vidas.
 </div>
 
 <div class="photo">
-
 <span>
 Aquí irá tu foto ❤️
 </span>
-
 </div>
 
 <button onclick="openGift()">
@@ -651,9 +556,7 @@ Hecho especialmente para ti.
 </section>
 
 
-<!-- =========================
-     INTRO
-========================= -->
+<!-- INTRO -->
 
 <section id="historia">
 
@@ -699,9 +602,7 @@ Porque ese día te conocí.
 </section>
 
 
-<!-- =========================
-     HISTORIA
-========================= -->
+<!-- HISTORIA -->
 
 <section>
 
@@ -796,9 +697,7 @@ me alegra muchísimo haberte conocido.
 </section>
 
 
-<!-- =========================
-     TIMELINE
-========================= -->
+<!-- LINEA DEL TIEMPO -->
 
 <section>
 
@@ -824,7 +723,6 @@ El día en que nuestras vidas se cruzaron.
 
 </div>
 
-
 <div class="event">
 
 <strong>
@@ -837,7 +735,6 @@ convirtiéndose en algo mucho más grande.
 </p>
 
 </div>
-
 
 <div class="event">
 
@@ -852,7 +749,6 @@ en mis recuerdos.
 
 </div>
 
-
 <div class="event">
 
 <strong>
@@ -865,7 +761,6 @@ y conocí a tu familia.
 </p>
 
 </div>
-
 
 <div class="event">
 
@@ -891,9 +786,7 @@ y todo lo que seguimos escribiendo.
 </section>
 
 
-<!-- =========================
-     CONTADOR
-========================= -->
+<!-- CONTADOR -->
 
 <section>
 
@@ -910,8 +803,8 @@ Desde aquel 29 de abril de 2025...
 </p>
 
 <div
-class="counter"
-id="counter">
+    class="counter"
+    id="counter">
 Cargando...
 </div>
 
@@ -927,9 +820,7 @@ por vivir. ❤️
 </section>
 
 
-<!-- =========================
-     RECUERDOS
-========================= -->
+<!-- RECUERDOS -->
 
 <section>
 
@@ -978,9 +869,7 @@ nuestros recuerdos. ❤️
 </section>
 
 
-<!-- =========================
-     CARTA
-========================= -->
+<!-- CARTA -->
 
 <section>
 
@@ -1056,9 +945,7 @@ Te quiero muchísimo, Romi. ❤️
 </section>
 
 
-<!-- =========================
-     CANCION
-========================= -->
+<!-- CANCION -->
 
 <section>
 
@@ -1104,9 +991,7 @@ Elvis Presley ❤️
 </section>
 
 
-<!-- =========================
-     SECRETO
-========================= -->
+<!-- SORPRESA -->
 
 <section>
 
@@ -1140,8 +1025,8 @@ Desbloquear sorpresa ❤️
 </button>
 
 <div
-class="secret"
-id="finalSecret">
+    class="secret"
+    id="finalSecret">
 
 <p>
 Si llegaste hasta aquí...
@@ -1182,9 +1067,7 @@ al recordar que aquel
 </section>
 
 
-<!-- =========================
-     FINAL
-========================= -->
+<!-- FINAL -->
 
 <section>
 
@@ -1227,13 +1110,11 @@ Te quiero, Romi.
 </section>
 
 
-<!-- =========================
-     MODAL
-========================= -->
+<!-- MODAL -->
 
 <div
-class="modal"
-id="modal">
+    class="modal"
+    id="modal">
 
 <div class="modal-box">
 
@@ -1255,14 +1136,12 @@ Cerrar ❤️
 
 <script>
 
-/* =========================
-   CREAR ESTRELLAS
-========================= */
+/* ESTRELLAS */
 
 const stars=
 document.getElementById("stars");
 
-for(let i=0;i<110;i++){
+for(let i=0;i<120;i++){
 
     const star=
     document.createElement("div");
@@ -1282,80 +1161,37 @@ for(let i=0;i<110;i++){
 }
 
 
-/* =========================
-   ANIMAR TARJETAS
-========================= */
-
-const observer=
-new IntersectionObserver(
-
-(entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("visible");
-
-}
-
-});
-
-},
-
-{
-threshold:.15
-}
-
-);
-
-document
-.querySelectorAll(".card,.quote")
-.forEach(element=>{
-observer.observe(element);
-});
-
-
-/* =========================
-   ABRIR REGALO
-========================= */
+/* ABRIR REGALO */
 
 function openGift(){
 
     createParticles(35);
 
-    const historia = document.getElementById("historia");
+    setTimeout(function(){
 
-    const card = historia.querySelector(".card");
-    const quote = historia.querySelector(".quote");
-
-    if(card){
-        card.classList.add("visible");
-    }
-
-    if(quote){
-        quote.classList.add("visible");
-    }
-
-    setTimeout(()=>{
+        const historia=
+        document.getElementById("historia");
 
         historia.scrollIntoView({
             behavior:"smooth",
             block:"start"
         });
 
-    },700);
-
+    },600);
 }
 
-/* =========================
-   PARTICULAS
-========================= */
+
+/* PARTICULAS */
 
 function createParticles(number){
 
-    const symbols=
-    ["❤️","✨","💙","💫","🤍"];
+    const symbols=[
+        "❤️",
+        "✨",
+        "💙",
+        "💫",
+        "🤍"
+    ];
 
     for(let i=0;i<number;i++){
 
@@ -1382,17 +1218,16 @@ function createParticles(number){
 
         document.body.appendChild(particle);
 
-        setTimeout(()=>{
+        setTimeout(function(){
+
             particle.remove();
+
         },6000);
     }
-
 }
 
 
-/* =========================
-   CONTADOR
-========================= */
+/* CONTADOR */
 
 const startDate=
 new Date("2025-04-29T00:00:00");
@@ -1426,13 +1261,12 @@ function updateCounter(){
     document
     .getElementById("counter")
     .innerHTML=
-    days+
-    " días<br>"+
-    hours+
-    " horas · "+
-    minutes+
-    " minutos ❤️";
-
+        days+
+        " días<br>"+
+        hours+
+        " horas · "+
+        minutes+
+        " minutos ❤️";
 }
 
 updateCounter();
@@ -1443,23 +1277,18 @@ setInterval(
 );
 
 
-/* =========================
-   CANCION
-========================= */
+/* CANCION */
 
 function playSong(){
 
     window.open(
-    "https://youtu.be/eTKeQhYVvbQ?si=P4biGYYU5Fz4RpDZ",
-    "_blank"
+        "https://youtu.be/eTKeQhYVvbQ?si=P4biGYYU5Fz4RpDZ",
+        "_blank"
     );
-
 }
 
 
-/* =========================
-   SECRETOS
-========================= */
+/* SECRETOS */
 
 let found=[];
 
@@ -1476,18 +1305,83 @@ function secret(type){
 
     if(type==="estrella"){
 
-        title=
-        "Encontraste una estrella ⭐";
+        title="Encontraste una estrella ⭐";
 
         text=
         "Hay personas que llegan a nuestra vida y hacen que todo brille un poquito más.";
-
     }
 
     if(type==="corazon"){
 
-        title=
-        "Encontraste un corazón ❤️";
+        title="Encontraste un corazón ❤️";
 
         text=
-        "Este representa to
+        "Este representa todos esos momentos que guardo con muchísimo cariño.";
+    }
+
+    if(type==="rosa"){
+
+        title="Encontraste una rosa 🌹";
+
+        text=
+        "Porque algunas cosas bonitas merecen quedarse guardadas para siempre.";
+    }
+
+    document
+    .getElementById("modalTitle")
+    .innerHTML=title;
+
+    document
+    .getElementById("modalText")
+    .innerHTML=text;
+
+    document
+    .getElementById("modal")
+    .style.display="flex";
+
+    if(found.length===3){
+
+        setTimeout(function(){
+
+            createParticles(30);
+
+        },700);
+    }
+}
+
+
+/* CERRAR MODAL */
+
+function closeModal(){
+
+    document
+    .getElementById("modal")
+    .style.display="none";
+}
+
+
+/* SORPRESA FINAL */
+
+function showFinal(){
+
+    const final=
+    document.getElementById("finalSecret");
+
+    final.style.display="block";
+
+    createParticles(45);
+
+    setTimeout(function(){
+
+        final.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+    },400);
+}
+
+</script>
+
+</body>
+</html>
