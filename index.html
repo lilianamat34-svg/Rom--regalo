@@ -3,169 +3,339 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Para Romi ❤️</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
-  scroll-behavior:smooth;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  background:#050712;
-  color:white;
-  font-family:Georgia,"Times New Roman",serif;
-  overflow-x:hidden;
+margin:0;
+background:
+radial-gradient(circle at top,#172554 0%,#080b18 45%,#02030a 100%);
+color:white;
+font-family:Georgia,"Times New Roman",serif;
+overflow-x:hidden;
 }
+
+/* ESTRELLAS */
 
 .stars{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background-image:
-    radial-gradient(circle,rgba(255,255,255,.8) 1px,transparent 1px),
-    radial-gradient(circle,rgba(147,197,253,.5) 1px,transparent 1px);
-  background-size:80px 80px,130px 130px;
-  animation:stars 20s linear infinite;
-  opacity:.35;
+position:fixed;
+inset:0;
+pointer-events:none;
+background-image:
+radial-gradient(circle,rgba(255,255,255,.9) 1px,transparent 1px),
+radial-gradient(circle,rgba(147,197,253,.7) 1px,transparent 1px);
+background-size:80px 80px,140px 140px;
+animation:starsMove 25s linear infinite;
+opacity:.35;
+z-index:0;
 }
 
-@keyframes stars{
-  from{transform:translateY(0)}
-  to{transform:translateY(80px)}
+@keyframes starsMove{
+from{transform:translateY(0)}
+to{transform:translateY(80px)}
 }
+
+/* SECCIONES */
 
 section{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:50px 20px;
-  position:relative;
-  z-index:2;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:70px 20px;
+position:relative;
+z-index:2;
 }
 
 .container{
-  width:100%;
-  max-width:750px;
-  text-align:center;
+width:100%;
+max-width:760px;
+text-align:center;
 }
 
+/* TEXTOS */
+
 h1{
-  font-size:48px;
-  margin:15px 0;
+font-size:48px;
+margin:15px 0;
+text-shadow:0 0 25px rgba(147,197,253,.35);
 }
 
 h2{
-  font-size:32px;
-  color:#bfdbfe;
-  margin-bottom:25px;
+font-size:32px;
+color:#bfdbfe;
+margin-bottom:30px;
 }
 
 p{
-  font-size:18px;
-  line-height:1.9;
-}
-
-.heart{
-  font-size:65px;
-  animation:pulse 1.8s infinite;
-}
-
-@keyframes pulse{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.15)}
-}
-
-.date{
-  color:#93c5fd;
-  letter-spacing:6px;
-  font-size:20px;
-  margin:25px 0;
-}
-
-.photo{
-  width:240px;
-  height:310px;
-  margin:30px auto;
-  border-radius:28px;
-  border:1px solid rgba(255,255,255,.2);
-  background:linear-gradient(145deg,#111827,#172554);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 20px 70px rgba(0,0,0,.6);
-  overflow:hidden;
-}
-
-.photo span{
-  color:#94a3b8;
-  padding:25px;
-}
-
-button{
-  border:0;
-  border-radius:999px;
-  padding:15px 30px;
-  color:white;
-  background:linear-gradient(135deg,#2563eb,#7c3aed);
-  font-size:16px;
-  box-shadow:0 10px 35px rgba(37,99,235,.35);
-}
-
-.card{
-  background:rgba(255,255,255,.055);
-  border:1px solid rgba(255,255,255,.12);
-  padding:30px;
-  border-radius:28px;
-  backdrop-filter:blur(12px);
-  box-shadow:0 20px 60px rgba(0,0,0,.35);
-  text-align:left;
-}
-
-.timeline{
-  border-left:2px solid #3b82f6;
-  padding-left:25px;
-  margin-top:30px;
-  text-align:left;
-}
-
-.event{
-  margin-bottom:40px;
-}
-
-.event strong{
-  color:#93c5fd;
-  font-size:20px;
-}
-
-.secret{
-  display:none;
-  margin-top:30px;
-  animation:appear 1.5s ease;
-}
-
-@keyframes appear{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-.counter{
-  font-size:28px;
-  color:#bfdbfe;
-  margin:30px 0;
-}
-
-.final{
-  font-size:25px;
-  line-height:1.7;
-  text-align:center;
+font-size:18px;
+line-height:1.9;
 }
 
 .fade{
-  opacity:.85;
+color:#cbd5e1;
 }
+
+/* CORAZON */
+
+.heart{
+font-size:70px;
+animation:heartbeat 1.7s infinite;
+}
+
+@keyframes heartbeat{
+
+0%,100%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.18);
+}
+
+}
+
+/* FECHA */
+
+.date{
+font-size:21px;
+letter-spacing:7px;
+color:#93c5fd;
+margin:30px 0;
+}
+
+/* FOTO */
+
+.photo{
+width:245px;
+height:320px;
+margin:35px auto;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.25);
+background:
+linear-gradient(145deg,#111827,#172554);
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+box-shadow:
+0 25px 80px rgba(0,0,0,.65),
+0 0 35px rgba(59,130,246,.15);
+}
+
+.photo span{
+color:#94a3b8;
+padding:25px;
+font-size:16px;
+}
+
+/* BOTONES */
+
+button{
+border:none;
+border-radius:999px;
+padding:16px 32px;
+font-size:17px;
+color:white;
+background:
+linear-gradient(135deg,#2563eb,#7c3aed);
+box-shadow:
+0 10px 35px rgba(37,99,235,.35);
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-3px) scale(1.04);
+}
+
+/* TARJETAS */
+
+.card{
+background:rgba(255,255,255,.055);
+border:1px solid rgba(255,255,255,.13);
+padding:32px;
+border-radius:30px;
+backdrop-filter:blur(14px);
+box-shadow:
+0 25px 70px rgba(0,0,0,.4);
+text-align:left;
+}
+
+/* LINEA DEL TIEMPO */
+
+.timeline{
+border-left:2px solid #3b82f6;
+padding-left:25px;
+margin-top:30px;
+}
+
+.event{
+margin-bottom:45px;
+position:relative;
+}
+
+.event:before{
+content:"❤️";
+position:absolute;
+left:-39px;
+top:0;
+font-size:17px;
+}
+
+.event strong{
+color:#93c5fd;
+font-size:20px;
+}
+
+/* CONTADOR */
+
+.counter{
+font-size:30px;
+color:#bfdbfe;
+text-align:center;
+margin:30px 0;
+}
+
+/* DECORACIONES */
+
+.decor{
+position:absolute;
+font-size:28px;
+opacity:.7;
+animation:float 5s ease-in-out infinite;
+pointer-events:none;
+}
+
+.decor1{
+top:15%;
+left:8%;
+}
+
+.decor2{
+top:40%;
+right:8%;
+animation-delay:1s;
+}
+
+.decor3{
+bottom:15%;
+left:12%;
+animation-delay:2s;
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0) rotate(0deg);
+}
+
+50%{
+transform:translateY(-18px) rotate(8deg);
+}
+
+}
+
+/* GALERIA */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:25px;
+}
+
+.gallery div{
+height:180px;
+border-radius:20px;
+background:linear-gradient(145deg,#111827,#172554);
+border:1px solid rgba(255,255,255,.15);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#94a3b8;
+}
+
+/* SORPRESA */
+
+.secret{
+display:none;
+margin-top:35px;
+animation:appear 1.5s ease;
+}
+
+@keyframes appear{
+
+from{
+opacity:0;
+transform:translateY(35px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* OBJETOS SECRETOS */
+
+.secretObject{
+position:absolute;
+font-size:27px;
+cursor:pointer;
+transition:.3s;
+z-index:10;
+}
+
+.secretObject:hover{
+transform:scale(1.3);
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.8);
+z-index:99999;
+align-items:center;
+justify-content:center;
+padding:25px;
+}
+
+.modalBox{
+background:
+linear-gradient(145deg,#0f172a,#172554);
+padding:35px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.2);
+max-width:500px;
+text-align:center;
+box-shadow:0 30px 100px rgba(0,0,0,.7);
+}
+
+/* FINAL */
+
+.final{
+font-size:25px;
+line-height:1.8;
+text-align:center;
+}
+
+.small{
+font-size:14px;
+color:#94a3b8;
+}
+
 </style>
 </head>
 
@@ -173,17 +343,55 @@ button{
 
 <div class="stars"></div>
 
+
+<!-- DECORACIONES -->
+
+<div class="decor decor1">✨</div>
+<div class="decor decor2">🌙</div>
+<div class="decor decor3">💫</div>
+
+
+<!-- OBJETOS SECRETOS -->
+
+<div
+class="secretObject"
+style="top:22%;left:6%;"
+onclick="secreto('estrella')">
+⭐
+</div>
+
+<div
+class="secretObject"
+style="top:68%;right:6%;"
+onclick="secreto('corazon')">
+❤️
+</div>
+
+<div
+class="secretObject"
+style="top:85%;left:8%;"
+onclick="secreto('rosa')">
+🌹
+</div>
+
+
 <!-- PORTADA -->
+
 <section>
+
 <div class="container">
 
-<div class="heart">❤️</div>
+<div class="heart">
+❤️
+</div>
 
-<h1>Para ti, Romi</h1>
+<h1>
+Para ti, Romi
+</h1>
 
 <p class="fade">
-Hay historias que comienzan sin saber que algún día
-se convertirán en algo inolvidable.
+Hay historias que comienzan sin saber
+que algún día cambiarán nuestras vidas.
 </p>
 
 <div class="date">
@@ -191,38 +399,53 @@ se convertirán en algo inolvidable.
 </div>
 
 <div class="photo">
+
 <span>
 Aquí irá tu foto ❤️
 </span>
+
 </div>
 
-<button onclick="irHistoria()">
+<button onclick="abrirRegalo()">
 Abrir mi regalo ✨
 </button>
 
+<p class="small">
+Hecho especialmente para ti.
+</p>
+
 </div>
+
 </section>
 
 
-<!-- INTRODUCCIÓN -->
+<!-- INTRODUCCION -->
+
 <section id="historia">
+
 <div class="container">
 
-<h2>¿Te acuerdas? ❤️</h2>
+<h2>
+¿Te acuerdas? ❤️
+</h2>
 
 <div class="card">
 
 <p>
-A veces me gusta pensar en cómo comenzó todo.
+A veces me gusta recordar cómo comenzó todo.
+</p>
+
+<p>
 No porque quiera quedarme en el pasado,
 sino porque cuando miro todo lo que hemos vivido,
 me parece increíble pensar que alguna vez
 solo éramos dos personas que todavía no sabían
-lo importante que llegarían a ser el uno para el otro.
+lo importantes que llegarían a ser el uno para el otro.
 </p>
 
 <p>
-Y cada vez que recuerdo aquel 29 de abril de 2025,
+Y cada vez que recuerdo aquel
+<strong>29 de abril de 2025</strong>,
 sonrío.
 </p>
 
@@ -233,14 +456,19 @@ Porque ese día te conocí.
 </div>
 
 </div>
+
 </section>
 
 
 <!-- HISTORIA -->
+
 <section>
+
 <div class="container">
 
-<h2>Nuestra historia 📖</h2>
+<h2>
+Nuestra historia 📖
+</h2>
 
 <div class="card">
 
@@ -318,95 +546,194 @@ me alegra muchísimo haberte conocido.
 </div>
 
 </div>
+
 </section>
 
 
 <!-- LINEA DEL TIEMPO -->
+
 <section>
+
 <div class="container">
 
-<h2>Algunos momentos de nosotros 🕰️</h2>
+<h2>
+Nuestra pequeña historia 🕰️
+</h2>
 
 <div class="card">
 
 <div class="timeline">
 
 <div class="event">
-<strong>29 de abril de 2025</strong>
+
+<strong>
+29 de abril de 2025
+</strong>
+
 <p>
 El día en que nuestras vidas se cruzaron.
 </p>
+
 </div>
+
 
 <div class="event">
-<strong>Nuestros primeros días</strong>
+
+<strong>
+Nuestros primeros días
+</strong>
+
 <p>
-Tres días que fueron suficientes para empezar
-a sentir algo diferente.
+Unas conversaciones que terminaron
+convirtiéndose en algo mucho más grande.
 </p>
+
 </div>
+
 
 <div class="event">
-<strong>Nuestro primer beso ❤️</strong>
+
+<strong>
+Nuestro primer beso ❤️
+</strong>
+
 <p>
-Ese martes que todavía recuerdo.
+Ese martes que todavía vive
+en mis recuerdos.
 </p>
+
 </div>
+
 
 <div class="event">
-<strong>El día que conocí tu mundo</strong>
+
+<strong>
+El día que conocí tu mundo
+</strong>
+
 <p>
-Cuando me invitaste a tu casa y conocí
-a tu familia.
+Cuando me invitaste a tu casa
+y conocí a tu familia.
 </p>
+
 </div>
+
 
 <div class="event">
-<strong>Y todos los días después...</strong>
+
+<strong>
+Todo lo que vino después
+</strong>
+
 <p>
-Los momentos que todavía nos quedan por vivir.
+Los momentos buenos, los difíciles,
+las risas, los abrazos y todo aquello
+que seguimos escribiendo.
 </p>
-</div>
 
 </div>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 
 <!-- CONTADOR -->
+
 <section>
+
 <div class="container">
 
-<h2>Y mira cuánto tiempo ha pasado... ⏳</h2>
+<h2>
+Mira cuánto tiempo ha pasado... ⏳
+</h2>
+
+<div class="card">
+
+<p style="text-align:center;">
+Desde aquel 29 de abril de 2025...
+</p>
+
+<div
+class="counter"
+id="contador">
+Cargando...
+</div>
+
+<p style="text-align:center;" class="fade">
+Y todavía tenemos muchísimo
+por vivir. ❤️
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RECUERDOS -->
+
+<section>
+
+<div class="container">
+
+<h2>
+Nuestros recuerdos 📸
+</h2>
 
 <div class="card">
 
 <p>
-Desde aquel 29 de abril de 2025...
+Aquí voy a guardar algunos recuerdos
+especiales.
 </p>
 
-<div class="counter" id="contador">
-Cargando...
-</div>
-
-<p class="fade">
-Y todavía tenemos muchísimo por escribir. ❤️
+<p>
+Por ahora estos espacios están esperando
+nuestras fotos. ❤️
 </p>
 
+<div class="gallery">
+
+<div>
+📸 Foto 1
+</div>
+
+<div>
+📸 Foto 2
+</div>
+
+<div>
+📸 Foto 3
+</div>
+
+<div>
+📸 Foto 4
 </div>
 
 </div>
+
+</div>
+
+</div>
+
 </section>
 
 
 <!-- CARTA -->
+
 <section>
+
 <div class="container">
 
-<h2>Algo que quiero decirte 💌</h2>
+<h2>
+Algo que quiero decirte 💌
+</h2>
 
 <div class="card">
 
@@ -415,32 +742,33 @@ Romi...
 </p>
 
 <p>
-Después de todo este tiempo, hay algo que quiero
-que nunca olvides.
+Después de todo este tiempo,
+hay algo que quiero que nunca olvides.
 </p>
 
 <p>
-Gracias por existir y por haber llegado a mi vida
-de una manera que jamás imaginé.
+Gracias por existir y por haber llegado
+a mi vida de una manera que jamás imaginé.
 </p>
 
 <p>
-Gracias por cada risa, cada abrazo, cada mirada,
-cada conversación y cada momento que hemos
-compartido.
+Gracias por cada risa, cada abrazo,
+cada mirada, cada conversación
+y cada momento que hemos compartido.
 </p>
 
 <p>
-Cuando pienso en nosotros, no pienso solamente
-en aquel primer beso o en aquel primer día.
+Cuando pienso en nosotros,
+no pienso solamente en aquel primer beso
+o en aquel primer día.
+</p>
+
+<p>
 Pienso en todo lo que vino después.
-</p>
-
-<p>
-En todo lo que hemos aprendido, en todo lo que
-hemos vivido y en todos esos pequeños momentos
-que quizá parecen simples, pero que para mí
-significan muchísimo.
+En todo lo que hemos aprendido,
+en todo lo que hemos vivido y en todos
+esos pequeños momentos que quizá parecen
+simples, pero que para mí significan muchísimo.
 </p>
 
 <p>
@@ -451,8 +779,8 @@ me alegra que seas parte de mi presente.
 
 <p>
 Y si algún día vuelves a esta página,
-quiero que recuerdes que fue hecha pensando
-solamente en ti.
+quiero que recuerdes que fue hecha
+pensando solamente en ti.
 </p>
 
 <p class="final">
@@ -462,57 +790,74 @@ Te quiero muchísimo, Romi. ❤️
 </div>
 
 </div>
+
 </section>
 
 
-<!-- MUSICA -->
+<!-- CANCION -->
+
 <section>
+
 <div class="container">
 
-<h2>Nuestra canción 🎵</h2>
+<h2>
+Nuestra canción 🎵
+</h2>
 
-<div class="card" style="text-align:center">
+<div class="card" style="text-align:center;">
 
 <p>
 Hay canciones que simplemente suenan bonitas.
-Y hay otras que terminan teniendo un significado.
+</p>
+
+<p>
+Y hay otras que terminan teniendo
+un significado especial.
 </p>
 
 <p>
 Esta es para ti. ❤️
 </p>
 
-<button onclick="alert('Aquí pondremos nuestra canción ❤️')">
-▶️ Reproducir
+<button onclick="musica()">
+▶️ Nuestra canción
 </button>
 
-<p class="fade">
-Después pondremos aquí el enlace de la canción.
+<p class="small">
+Aquí pondremos el enlace de la canción
+cuando terminemos la página.
 </p>
 
 </div>
 
 </div>
+
 </section>
 
 
 <!-- SORPRESA -->
+
 <section>
+
 <div class="container">
 
-<h2>Espera... 👀</h2>
+<h2>
+¿Creías que ya había terminado? 👀
+</h2>
 
-<div class="card" style="text-align:center">
+<div class="card" style="text-align:center;">
 
 <p>
-¿Creías que esto ya había terminado?
+Todavía queda una última cosa.
 </p>
 
 <button onclick="mostrarSorpresa()">
-Todavía falta algo ✨
+Abrir la última sorpresa ✨
 </button>
 
-<div class="secret" id="sorpresa">
+<div
+class="secret"
+id="sorpresa">
 
 <p>
 Si llegaste hasta aquí...
@@ -523,17 +868,25 @@ significa que leíste todo.
 </p>
 
 <p>
-Y por eso quiero decirte algo:
+Y quiero que recuerdes algo:
 </p>
 
 <p class="final">
-No importa cuántas veces recuerde
+
+No importa cuánto tiempo pase
+ni cuántas veces recuerde
 cómo comenzó nuestra historia...
+
 <br><br>
-siempre voy a sonreír al recordar
-que ese día te conocí.
+
+Siempre voy a sonreír
+al recordar que aquel
+29 de abril te conocí.
+
 <br><br>
+
 ❤️
+
 </p>
 
 </div>
@@ -541,39 +894,308 @@ que ese día te conocí.
 </div>
 
 </div>
+
 </section>
+
+
+<!-- FINAL -->
+
+<section>
+
+<div class="container">
+
+<div class="heart">
+❤️
+</div>
+
+<h2>
+Gracias por existir.
+</h2>
+
+<p class="final">
+
+Esta página termina aquí...
+
+<br><br>
+
+pero nuestra historia
+todavía tiene muchas páginas
+por escribir.
+
+<br><br>
+
+<strong>
+Te quiero, Romi.
+</strong>
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- MODAL -->
+
+<div
+class="modal"
+id="modal">
+
+<div class="modalBox">
+
+<h2 id="modalTitulo">
+✨
+</h2>
+
+<p id="modalTexto">
+</p>
+
+<button onclick="cerrarModal()">
+Cerrar ❤️
+</button>
+
+</div>
+
+</div>
 
 
 <script>
 
-function irHistoria(){
-document.getElementById("historia").scrollIntoView({
+/* ABRIR REGALO */
+
+function abrirRegalo(){
+
+for(let i=0;i<35;i++){
+
+const elemento=document.createElement("div");
+
+elemento.innerHTML=
+Math.random()>.5 ? "❤️":"✨";
+
+elemento.style.position="fixed";
+elemento.style.left=Math.random()*100+"vw";
+elemento.style.top="100vh";
+elemento.style.fontSize=
+(15+Math.random()*25)+"px";
+
+elemento.style.zIndex="99999";
+elemento.style.pointerEvents="none";
+
+document.body.appendChild(elemento);
+
+elemento.animate(
+
+[
+{
+transform:"translateY(0) rotate(0deg)",
+opacity:1
+},
+
+{
+transform:
+"translateY(-110vh) rotate("+
+(Math.random()*360)+
+"deg)",
+opacity:0
+}
+
+],
+
+{
+duration:2500+Math.random()*2000,
+easing:"ease-out"
+}
+
+);
+
+setTimeout(()=>{
+elemento.remove();
+},5000);
+
+}
+
+setTimeout(()=>{
+
+document.getElementById("historia")
+.scrollIntoView({
 behavior:"smooth"
 });
+
+},700);
+
 }
 
-function mostrarSorpresa(){
-document.getElementById("sorpresa").style.display="block";
-}
 
-const inicio = new Date("2025-04-29T00:00:00");
+/* CONTADOR */
+
+const inicio=
+new Date("2025-04-29T00:00:00");
 
 function actualizarContador(){
 
-const ahora = new Date();
+const ahora=new Date();
 
-const diferencia = ahora - inicio;
+const diferencia=
+ahora-inicio;
 
-const dias = Math.floor(
-diferencia / (1000*60*60*24)
+const dias=Math.floor(
+diferencia/
+(1000*60*60*24)
 );
 
-document.getElementById("contador").innerHTML =
-dias + " días juntos en esta historia ❤️";
+document.getElementById("contador")
+.innerHTML=
+dias+
+" días desde que comenzó nuestra historia ❤️";
 
 }
 
 actualizarContador();
+
+
+/* SORPRESA */
+
+function mostrarSorpresa(){
+
+document.getElementById("sorpresa")
+.style.display="block";
+
+for(let i=0;i<20;i++){
+
+const corazon=
+document.createElement("div");
+
+corazon.innerHTML="❤️";
+
+corazon.style.position="fixed";
+corazon.style.left=
+Math.random()*100+"vw";
+
+corazon.style.top="100vh";
+
+corazon.style.fontSize=
+(15+Math.random()*25)+"px";
+
+corazon.style.zIndex="99999";
+
+document.body.appendChild(corazon);
+
+corazon.animate(
+
+[
+{
+transform:"translateY(0)",
+opacity:1
+},
+
+{
+transform:"translateY(-110vh)",
+opacity:0
+}
+
+],
+
+{
+duration:3000+Math.random()*2000,
+easing:"ease-out"
+}
+
+);
+
+setTimeout(()=>{
+corazon.remove();
+},5000);
+
+}
+
+}
+
+
+/* OBJETOS SECRETOS */
+
+let encontrados=[];
+
+function secreto(tipo){
+
+if(encontrados.includes(tipo)){
+return;
+}
+
+encontrados.push(tipo);
+
+let titulo="";
+let texto="";
+
+if(tipo==="estrella"){
+
+titulo="Encontraste una estrella ⭐";
+
+texto=
+"Hay personas que llegan a nuestra vida y hacen que todo brille un poquito más.";
+
+}
+
+if(tipo==="corazon"){
+
+titulo="Encontraste un corazón ❤️";
+
+texto=
+"Este representa todos esos momentos que guardo con muchísimo cariño.";
+
+}
+
+if(tipo==="rosa"){
+
+titulo="Encontraste una rosa 🌹";
+
+texto=
+"Porque algunas cosas bonitas merecen quedarse guardadas para siempre.";
+
+}
+
+document.getElementById("modalTitulo")
+.innerHTML=titulo;
+
+document.getElementById("modalTexto")
+.innerHTML=texto;
+
+document.getElementById("modal")
+.style.display="flex";
+
+if(encontrados.length===3){
+
+setTimeout(()=>{
+
+alert(
+"Encontraste las tres cosas escondidas. ❤️ Ahora sabes que todavía había un último secreto."
+);
+
+},1200);
+
+}
+
+}
+
+
+/* CERRAR MODAL */
+
+function cerrarModal(){
+
+document.getElementById("modal")
+.style.display="none";
+
+}
+
+
+/* MUSICA */
+
+function musica(){
+
+alert(
+"Aquí pondremos nuestra canción ❤️"
+);
+
+}
 
 </script>
 
