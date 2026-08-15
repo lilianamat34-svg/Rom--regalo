@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Para Romi ❤️</title>
 
 <style>
@@ -23,19 +22,19 @@ body{
     font-family:Georgia,"Times New Roman",serif;
 
     background:
-    radial-gradient(
-        circle at 50% 0%,
-        #172554 0%,
-        #080b18 45%,
-        #02030a 100%
-    );
+        radial-gradient(
+            circle at 50% 0%,
+            #172554 0%,
+            #080b18 45%,
+            #02030a 100%
+        );
 
     overflow-x:hidden;
 }
 
 
 /* =========================
-   ESTRELLAS
+   FONDO
 ========================= */
 
 #stars{
@@ -48,22 +47,15 @@ body{
 
 .star{
     position:absolute;
-
     width:2px;
     height:2px;
-
-    background:white;
-
     border-radius:50%;
-
+    background:white;
     opacity:.7;
-
-    animation:
-    twinkle 3s infinite alternate;
+    animation:twinkle 3s infinite alternate;
 }
 
 @keyframes twinkle{
-
     from{
         opacity:.15;
         transform:scale(.7);
@@ -73,7 +65,6 @@ body{
         opacity:1;
         transform:scale(1.5);
     }
-
 }
 
 
@@ -82,26 +73,19 @@ body{
 ========================= */
 
 .particle{
-
     position:fixed;
-
     bottom:-40px;
-
     pointer-events:none;
-
     z-index:9999;
-
-    animation:
-    rise linear forwards;
-
+    animation:rise linear forwards;
 }
 
 @keyframes rise{
 
     0%{
         transform:
-        translateY(0)
-        rotate(0);
+            translateY(0)
+            rotate(0);
 
         opacity:0;
     }
@@ -112,12 +96,11 @@ body{
 
     100%{
         transform:
-        translateY(-115vh)
-        rotate(360deg);
+            translateY(-115vh)
+            rotate(360deg);
 
         opacity:0;
     }
-
 }
 
 
@@ -126,32 +109,23 @@ body{
 ========================= */
 
 section{
-
     min-height:100vh;
 
     display:flex;
 
     align-items:center;
-
     justify-content:center;
 
-    padding:
-    75px 20px;
+    padding:75px 20px;
 
     position:relative;
-
     z-index:2;
-
 }
 
 .container{
-
     width:100%;
-
     max-width:780px;
-
     text-align:center;
-
 }
 
 
@@ -160,42 +134,29 @@ section{
 ========================= */
 
 h1{
-
-    font-size:
-    clamp(42px,10vw,65px);
-
-    margin:
-    15px 0;
+    font-size:clamp(42px,10vw,65px);
+    margin:15px 0;
 
     text-shadow:
-    0 0 25px
-    rgba(147,197,253,.35);
-
+        0 0 25px
+        rgba(147,197,253,.35);
 }
 
 h2{
-
-    font-size:
-    clamp(28px,7vw,38px);
+    font-size:clamp(28px,7vw,38px);
 
     color:#bfdbfe;
 
     margin-bottom:30px;
-
 }
 
 p{
-
     font-size:18px;
-
     line-height:1.9;
-
 }
 
 .fade{
-
     color:#cbd5e1;
-
 }
 
 
@@ -204,18 +165,16 @@ p{
 ========================= */
 
 .main-heart{
-
     font-size:75px;
 
     animation:
-    heartbeat 1.6s infinite;
+        heartbeat 1.6s infinite;
 
     filter:
-    drop-shadow(
-        0 0 20px
-        rgba(244,63,94,.45)
-    );
-
+        drop-shadow(
+            0 0 20px
+            rgba(244,63,94,.45)
+        );
 }
 
 @keyframes heartbeat{
@@ -227,7 +186,6 @@ p{
     50%{
         transform:scale(1.18);
     }
-
 }
 
 
@@ -236,7 +194,6 @@ p{
 ========================= */
 
 .date{
-
     color:#93c5fd;
 
     font-size:20px;
@@ -244,45 +201,92 @@ p{
     letter-spacing:7px;
 
     margin:28px 0;
-
 }
 
 
 /* =========================
-   ROSA PRINCIPAL
+   ROSA DE PORTADA
 ========================= */
 
-.rose{
+.rose-main{
 
     font-size:105px;
 
-    margin:30px 0;
+    margin:30px auto;
+
+    width:max-content;
 
     filter:
-    drop-shadow(
-        0 0 30px
-        rgba(244,63,94,.25)
-    );
+        drop-shadow(
+            0 0 30px
+            rgba(244,63,94,.3)
+        );
 
     animation:
-    roseFloat 4s ease-in-out infinite;
-
+        roseFloat 4s ease-in-out infinite;
 }
 
 @keyframes roseFloat{
 
     0%,100%{
         transform:
-        translateY(0)
-        rotate(-3deg);
+            translateY(0)
+            rotate(-4deg);
     }
 
     50%{
         transform:
-        translateY(-12px)
-        rotate(3deg);
+            translateY(-14px)
+            rotate(4deg);
+    }
+}
+
+
+/* =========================
+   ANILLO DE PORTADA
+========================= */
+
+.rose-ring{
+
+    width:190px;
+    height:190px;
+
+    margin:25px auto;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(147,197,253,.2);
+
+    box-shadow:
+        0 0 45px
+        rgba(59,130,246,.12);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    animation:
+        ringPulse 4s ease-in-out infinite;
+}
+
+@keyframes ringPulse{
+
+    0%,100%{
+        transform:scale(1);
+        box-shadow:
+            0 0 35px
+            rgba(59,130,246,.1);
     }
 
+    50%{
+        transform:scale(1.04);
+        box-shadow:
+            0 0 60px
+            rgba(59,130,246,.2);
+    }
 }
 
 
@@ -291,48 +295,77 @@ p{
 ========================= */
 
 button{
-
     border:none;
 
     border-radius:999px;
 
-    padding:
-    16px 30px;
+    padding:16px 30px;
 
     font-size:16px;
 
     color:white;
 
     background:
-    linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
 
     box-shadow:
-    0 10px 35px
-    rgba(37,99,235,.35);
+        0 10px 35px
+        rgba(37,99,235,.35);
 
     cursor:pointer;
 
     transition:.3s;
 
+    position:relative;
+
+    overflow:hidden;
 }
 
 button:hover{
-
     transform:
-    translateY(-4px)
-    scale(1.04);
+        translateY(-4px)
+        scale(1.04);
 
+    box-shadow:
+        0 15px 45px
+        rgba(59,130,246,.5);
 }
 
 button:active{
+    transform:scale(.95);
+}
 
-    transform:
-    scale(.95);
+button::after{
 
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:60%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.25),
+            transparent
+        );
+
+    transform:skewX(-20deg);
+
+    transition:.6s;
+}
+
+button:hover::after{
+    left:140%;
 }
 
 
@@ -341,52 +374,40 @@ button:active{
 ========================= */
 
 .card{
-
     background:
-    rgba(255,255,255,.055);
+        rgba(255,255,255,.055);
 
     border:
-    1px solid
-    rgba(255,255,255,.13);
+        1px solid
+        rgba(255,255,255,.13);
 
     padding:32px;
 
     border-radius:30px;
 
-    backdrop-filter:
-    blur(15px);
+    backdrop-filter:blur(15px);
 
     box-shadow:
-    0 25px 70px
-    rgba(0,0,0,.4);
+        0 25px 70px
+        rgba(0,0,0,.4);
 
     text-align:left;
 
     animation:
-    cardAppear .9s ease both;
-
+        cardAppear .9s ease both;
 }
 
 @keyframes cardAppear{
 
     from{
-
         opacity:0;
-
-        transform:
-        translateY(25px);
-
+        transform:translateY(25px);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-        translateY(0);
-
+        transform:translateY(0);
     }
-
 }
 
 
@@ -396,114 +417,23 @@ button:active{
 
 .quote{
 
-    margin:
-    35px 0;
+    margin:35px 0;
 
     padding:20px;
 
     border-left:
-    2px solid
-    #60a5fa;
+        2px solid
+        #60a5fa;
 
     color:#bfdbfe;
 
     font-style:italic;
 
     background:
-    rgba(59,130,246,.05);
+        rgba(59,130,246,.05);
 
     border-radius:
-    0 15px 15px 0;
-
-}
-
-
-/* =========================
-   RECUERDOS
-========================= */
-
-.memories{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:18px;
-
-    margin-top:30px;
-
-}
-
-.memory{
-
-    padding:25px;
-
-    min-height:190px;
-
-    border-radius:25px;
-
-    background:
-    linear-gradient(
-        145deg,
-        rgba(30,41,59,.8),
-        rgba(23,37,84,.65)
-    );
-
-    border:
-    1px solid
-    rgba(255,255,255,.12);
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    transition:.4s;
-
-}
-
-.memory:hover{
-
-    transform:
-    translateY(-7px)
-    scale(1.02);
-
-    box-shadow:
-    0 15px 40px
-    rgba(0,0,0,.35);
-
-}
-
-.memory-icon{
-
-    font-size:45px;
-
-    margin-bottom:15px;
-
-}
-
-.memory-title{
-
-    color:#bfdbfe;
-
-    font-size:20px;
-
-    margin-bottom:10px;
-
-}
-
-.memory p{
-
-    font-size:15px;
-
-    color:#cbd5e1;
-
+        0 15px 15px 0;
 }
 
 
@@ -514,11 +444,10 @@ button:active{
 .timeline{
 
     border-left:
-    2px solid
-    #3b82f6;
+        2px solid
+        #3b82f6;
 
     padding-left:28px;
-
 }
 
 .event{
@@ -526,7 +455,6 @@ button:active{
     margin-bottom:45px;
 
     position:relative;
-
 }
 
 .event:before{
@@ -536,11 +464,9 @@ button:active{
     position:absolute;
 
     left:-42px;
-
     top:0;
 
     font-size:17px;
-
 }
 
 .event strong{
@@ -548,7 +474,6 @@ button:active{
     color:#93c5fd;
 
     font-size:20px;
-
 }
 
 
@@ -566,44 +491,143 @@ button:active{
 
     margin:30px 0;
 
+    text-shadow:
+        0 0 20px
+        rgba(96,165,250,.25);
 }
 
 
 /* =========================
-   CARTA
+   RECUERDOS PLAN B
 ========================= */
 
-.letter{
+.memory-intro{
 
-    position:relative;
+    text-align:center;
 
-    padding:35px 25px;
+    color:#cbd5e1;
+
+    margin-bottom:30px;
+}
+
+.memories{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:16px;
+
+    margin-top:25px;
+}
+
+.memory{
+
+    min-height:210px;
+
+    padding:25px 18px;
 
     border-radius:25px;
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.07),
-        rgba(30,41,59,.55)
-    );
+        linear-gradient(
+            145deg,
+            rgba(17,24,39,.9),
+            rgba(23,37,84,.75)
+        );
 
     border:
-    1px solid
-    rgba(255,255,255,.13);
+        1px solid
+        rgba(255,255,255,.12);
 
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
-.letter:before{
+.memory::before{
 
-    content:"💌";
+    content:"";
 
-    display:block;
+    position:absolute;
 
-    font-size:45px;
+    width:120px;
+    height:120px;
 
-    margin-bottom:15px;
+    border-radius:50%;
 
+    background:
+        rgba(59,130,246,.08);
+
+    top:-50px;
+    right:-50px;
+}
+
+.memory:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,.4);
+}
+
+.memory-icon{
+
+    font-size:48px;
+
+    margin-bottom:13px;
+
+    animation:
+        memoryFloat 3s ease-in-out infinite;
+}
+
+@keyframes memoryFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+}
+
+.memory-title{
+
+    color:#bfdbfe;
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+}
+
+.memory p{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    color:#cbd5e1;
+
+    margin:0;
 }
 
 
@@ -622,62 +646,48 @@ button:active{
     pointer-events:none;
 
     animation:
-    float 5s ease-in-out infinite;
-
+        float 5s ease-in-out infinite;
 }
 
 .decor1{
-
     top:15%;
     left:8%;
-
 }
 
 .decor2{
-
     top:40%;
     right:8%;
 
     animation-delay:1s;
-
 }
 
 .decor3{
-
     bottom:15%;
     left:10%;
 
     animation-delay:2s;
-
 }
 
 .decor4{
-
     bottom:25%;
     right:10%;
 
     animation-delay:3s;
-
 }
 
 @keyframes float{
 
     0%,100%{
-
         transform:
-        translateY(0)
-        rotate(0);
-
+            translateY(0)
+            rotate(0);
     }
 
     50%{
-
         transform:
-        translateY(-18px)
-        rotate(8deg);
-
+            translateY(-18px)
+            rotate(8deg);
     }
-
 }
 
 
@@ -697,12 +707,16 @@ button:active{
 
     transition:.3s;
 
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(255,255,255,.2)
+        );
 }
 
 .secret-object:hover{
 
-    transform:
-    scale(1.4);
+    transform:scale(1.4);
 
 }
 
@@ -718,45 +732,20 @@ button:active{
     margin-top:35px;
 
     animation:
-    appear 1.2s ease;
-
+        appear 1.2s ease;
 }
 
 @keyframes appear{
 
     from{
-
         opacity:0;
-
-        transform:
-        translateY(30px);
-
+        transform:translateY(30px);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-        translateY(0);
-
+        transform:translateY(0);
     }
-
-}
-
-
-/* =========================
-   FINAL
-========================= */
-
-.final{
-
-    text-align:center;
-
-    font-size:25px;
-
-    line-height:1.8;
-
 }
 
 
@@ -773,7 +762,7 @@ button:active{
     inset:0;
 
     background:
-    rgba(0,0,0,.82);
+        rgba(0,0,0,.82);
 
     z-index:99999;
 
@@ -782,7 +771,6 @@ button:active{
     justify-content:center;
 
     padding:25px;
-
 }
 
 .modal-box{
@@ -796,47 +784,51 @@ button:active{
     border-radius:30px;
 
     background:
-    linear-gradient(
-        145deg,
-        #0f172a,
-        #172554
-    );
+        linear-gradient(
+            145deg,
+            #0f172a,
+            #172554
+        );
 
     border:
-    1px solid
-    rgba(255,255,255,.2);
+        1px solid
+        rgba(255,255,255,.2);
 
     text-align:center;
 
     box-shadow:
-    0 30px 100px
-    rgba(0,0,0,.7);
+        0 30px 100px
+        rgba(0,0,0,.7);
 
     animation:
-    modalIn .5s ease;
-
+        modalIn .5s ease;
 }
 
 @keyframes modalIn{
 
     from{
-
         opacity:0;
-
-        transform:
-        scale(.8);
-
+        transform:scale(.8);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-        scale(1);
-
+        transform:scale(1);
     }
+}
 
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+
+    text-align:center;
+
+    font-size:25px;
+
+    line-height:1.8;
 }
 
 
@@ -847,46 +839,36 @@ button:active{
 @media(max-width:600px){
 
     section{
-
-        padding:
-        70px 17px;
-
+        padding:70px 17px;
     }
 
     .card{
-
         padding:24px;
-
     }
 
     p{
-
         font-size:17px;
-
     }
 
     .memories{
-
         grid-template-columns:1fr;
-
     }
 
     .memory{
-
-        min-height:170px;
-
+        min-height:190px;
     }
 
     .decor{
-
         font-size:22px;
-
     }
 
-    .rose{
+    .rose-ring{
+        width:165px;
+        height:165px;
+    }
 
+    .rose-main{
         font-size:85px;
-
     }
 
 }
@@ -894,16 +876,19 @@ button:active{
 </style>
 </head>
 
-
 <body>
 
 
-<!-- ESTRELLAS -->
+<!-- =========================
+     ESTRELLAS
+========================= -->
 
 <div id="stars"></div>
 
 
-<!-- DECORACIONES -->
+<!-- =========================
+     DECORACIONES
+========================= -->
 
 <div class="decor decor1">✨</div>
 
@@ -914,34 +899,36 @@ button:active{
 <div class="decor decor4">🌹</div>
 
 
-<!-- SECRETOS -->
+<!-- =========================
+     SECRETOS
+========================= -->
 
 <div
-class="secret-object"
-style="top:22%;left:6%;"
-onclick="secret('estrella')">
+    class="secret-object"
+    style="top:22%;left:6%;"
+    onclick="secret('estrella')">
 
-⭐
+    ⭐
 
 </div>
 
 
 <div
-class="secret-object"
-style="top:65%;right:6%;"
-onclick="secret('corazon')">
+    class="secret-object"
+    style="top:65%;right:6%;"
+    onclick="secret('corazon')">
 
-❤️
+    ❤️
 
 </div>
 
 
 <div
-class="secret-object"
-style="top:87%;left:8%;"
-onclick="secret('rosa')">
+    class="secret-object"
+    style="top:87%;left:8%;"
+    onclick="secret('rosa')">
 
-🌹
+    🌹
 
 </div>
 
@@ -974,15 +961,15 @@ que algún día cambiarán nuestras vidas.
 
 
 <div class="date">
-
 29 · 04 · 2025
-
 </div>
 
 
-<div class="rose">
+<div class="rose-ring">
 
+<div class="rose-main">
 🌹
+</div>
 
 </div>
 
@@ -1004,7 +991,7 @@ Abrir mi regalo ✨
 
 <p class="fade">
 
-Con todo mi corazón.
+Hecho especialmente para ti.
 
 </p>
 
@@ -1024,9 +1011,7 @@ Con todo mi corazón.
 
 
 <h2>
-
 ¿Te acuerdas? ❤️
-
 </h2>
 
 
@@ -1034,9 +1019,7 @@ Con todo mi corazón.
 
 
 <p>
-
 A veces me gusta recordar cómo comenzó todo.
-
 </p>
 
 
@@ -1069,9 +1052,7 @@ sonrío.
 
 
 <p>
-
 Porque ese día te conocí.
-
 </p>
 
 
@@ -1092,9 +1073,7 @@ Porque ese día te conocí.
 
 
 <h2>
-
 Nuestra historia 📖
-
 </h2>
 
 
@@ -1102,9 +1081,7 @@ Nuestra historia 📖
 
 
 <p>
-
 Recuerdo un 29 de abril del 2025...
-
 </p>
 
 
@@ -1224,7 +1201,7 @@ me alegra muchísimo haberte conocido.
 
 
 <!-- =========================
-     RECUERDOS
+     LINEA DEL TIEMPO
 ========================= -->
 
 <section>
@@ -1233,9 +1210,107 @@ me alegra muchísimo haberte conocido.
 
 
 <h2>
+Nuestra pequeña historia 🕰️
+</h2>
 
-Nuestros recuerdos ✨
 
+<div class="card">
+
+
+<div class="timeline">
+
+
+<div class="event">
+
+<strong>
+29 de abril de 2025
+</strong>
+
+<p>
+El día en que nuestras vidas se cruzaron.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<strong>
+Nuestros primeros días
+</strong>
+
+<p>
+Unas conversaciones que terminaron
+convirtiéndose en algo mucho más grande.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<strong>
+Nuestro primer beso ❤️
+</strong>
+
+<p>
+Ese martes que todavía vive
+en mis recuerdos.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<strong>
+El día que conocí tu mundo
+</strong>
+
+<p>
+Cuando me invitaste a tu casa
+y conocí a tu familia.
+</p>
+
+</div>
+
+
+<div class="event">
+
+<strong>
+Todo lo que vino después
+</strong>
+
+<p>
+Las risas, los abrazos,
+los momentos difíciles,
+los momentos bonitos
+y todo lo que seguimos escribiendo.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTADOR
+========================= -->
+
+<section>
+
+<div class="container">
+
+
+<h2>
+Mira cuánto tiempo ha pasado... ⏳
 </h2>
 
 
@@ -1244,6 +1319,56 @@ Nuestros recuerdos ✨
 
 <p style="text-align:center;">
 
+Desde aquel 29 de abril de 2025...
+
+</p>
+
+
+<div
+    class="counter"
+    id="counter">
+
+Cargando...
+
+</div>
+
+
+<p
+    style="text-align:center;"
+    class="fade">
+
+Y todavía nos queda muchísimo
+por vivir. ❤️
+
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     RECUERDOS PLAN B
+========================= -->
+
+<section>
+
+<div class="container">
+
+
+<h2>
+Nuestros recuerdos ✨
+</h2>
+
+
+<div class="card">
+
+
+<p class="memory-intro">
+
 No necesito una fotografía para recordar
 los momentos que hicieron especial
 nuestra historia.
@@ -1251,16 +1376,18 @@ nuestra historia.
 </p>
 
 
-<p style="text-align:center;" class="fade">
+<p class="memory-intro">
 
 Porque algunos recuerdos
-se quedan guardados en el corazón.
+se quedan guardados en el corazón. ❤️
 
 </p>
 
 
 <div class="memories">
 
+
+<!-- RECUERDO 1 -->
 
 <div class="memory">
 
@@ -1269,9 +1396,7 @@ se quedan guardados en el corazón.
 </div>
 
 <div class="memory-title">
-
 El comienzo
-
 </div>
 
 <p>
@@ -1285,6 +1410,8 @@ se cruzaron.
 </div>
 
 
+<!-- RECUERDO 2 -->
+
 <div class="memory">
 
 <div class="memory-icon">
@@ -1292,9 +1419,7 @@ se cruzaron.
 </div>
 
 <div class="memory-title">
-
 Nuestro primer beso
-
 </div>
 
 <p>
@@ -1308,6 +1433,8 @@ en un recuerdo eterno.
 </div>
 
 
+<!-- RECUERDO 3 -->
+
 <div class="memory">
 
 <div class="memory-icon">
@@ -1315,9 +1442,7 @@ en un recuerdo eterno.
 </div>
 
 <div class="memory-title">
-
 Conocí tu mundo
-
 </div>
 
 <p>
@@ -1331,6 +1456,8 @@ más de ti.
 </div>
 
 
+<!-- RECUERDO 4 -->
+
 <div class="memory">
 
 <div class="memory-icon">
@@ -1338,9 +1465,7 @@ más de ti.
 </div>
 
 <div class="memory-title">
-
 Todo lo que vino después
-
 </div>
 
 <p>
@@ -1374,179 +1499,6 @@ una fotografía para ser inolvidables."
 
 
 <!-- =========================
-     TIMELINE
-========================= -->
-
-<section>
-
-<div class="container">
-
-
-<h2>
-
-Nuestra pequeña historia 🕰️
-
-</h2>
-
-
-<div class="card">
-
-
-<div class="timeline">
-
-
-<div class="event">
-
-<strong>
-
-29 de abril de 2025
-
-</strong>
-
-<p>
-
-El día en que nuestras vidas
-se cruzaron.
-
-</p>
-
-</div>
-
-
-<div class="event">
-
-<strong>
-
-Nuestros primeros días
-
-</strong>
-
-<p>
-
-Unas conversaciones que terminaron
-convirtiéndose en algo mucho más grande.
-
-</p>
-
-</div>
-
-
-<div class="event">
-
-<strong>
-
-Nuestro primer beso ❤️
-
-</strong>
-
-<p>
-
-Ese martes que todavía vive
-en mis recuerdos.
-
-</p>
-
-</div>
-
-
-<div class="event">
-
-<strong>
-
-El día que conocí tu mundo
-
-</strong>
-
-<p>
-
-Cuando me invitaste a tu casa
-y conocí a tu familia.
-
-</p>
-
-</div>
-
-
-<div class="event">
-
-<strong>
-
-Todo lo que vino después
-
-</strong>
-
-<p>
-
-Las risas, los abrazos,
-los momentos difíciles,
-los momentos bonitos
-y todo lo que seguimos escribiendo.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     CONTADOR
-========================= -->
-
-<section>
-
-<div class="container">
-
-
-<h2>
-
-Mira cuánto tiempo ha pasado... ⏳
-
-</h2>
-
-
-<div class="card">
-
-
-<p style="text-align:center;">
-
-Desde aquel 29 de abril de 2025...
-
-</p>
-
-
-<div
-class="counter"
-id="counter">
-
-Cargando...
-
-</div>
-
-
-<p style="text-align:center;" class="fade">
-
-Y todavía nos queda muchísimo
-por vivir. ❤️
-
-</p>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
      CARTA
 ========================= -->
 
@@ -1556,22 +1508,15 @@ por vivir. ❤️
 
 
 <h2>
-
 Algo que quiero decirte 💌
-
 </h2>
 
 
 <div class="card">
 
 
-<div class="letter">
-
-
 <p>
-
 Romi...
-
 </p>
 
 
@@ -1659,8 +1604,6 @@ Te quiero muchísimo, Romi. ❤️
 
 </div>
 
-</div>
-
 </section>
 
 
@@ -1674,9 +1617,7 @@ Te quiero muchísimo, Romi. ❤️
 
 
 <h2>
-
 Nuestra canción 🎵
-
 </h2>
 
 
@@ -1684,9 +1625,7 @@ Nuestra canción 🎵
 
 
 <div style="font-size:60px;">
-
 🎶
-
 </div>
 
 
@@ -1706,9 +1645,7 @@ un significado especial.
 
 
 <p>
-
 Esta es nuestra canción.
-
 </p>
 
 
@@ -1746,9 +1683,7 @@ Elvis Presley ❤️
 
 
 <h2>
-
 ¿Creías que ya había terminado? 👀
-
 </h2>
 
 
@@ -1756,16 +1691,12 @@ Elvis Presley ❤️
 
 
 <div style="font-size:55px;">
-
 🔐
-
 </div>
 
 
 <p>
-
 Todavía queda algo escondido.
-
 </p>
 
 
@@ -1778,9 +1709,7 @@ sorpresas que dejé por aquí...
 
 
 <p>
-
 Pero todavía falta una última cosa.
-
 </p>
 
 
@@ -1792,222 +1721,5 @@ Desbloquear sorpresa ❤️
 
 
 <div
-class="secret"
-id="finalSecret">
-
-
-<p>
-
-Si llegaste hasta aquí...
-
-</p>
-
-
-<p>
-
-significa que leíste todo.
-
-</p>
-
-
-<p>
-
-Y quiero que recuerdes algo:
-
-</p>
-
-
-<p class="final">
-
-No importa cuánto tiempo pase
-ni cuántas veces recuerde
-cómo comenzó nuestra historia...
-
-<br><br>
-
-Siempre voy a sonreír
-al recordar que aquel
-29 de abril te conocí.
-
-<br><br>
-
-🌹
-
-<br><br>
-
-❤️
-
-</p>
-
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     FINAL
-========================= -->
-
-<section>
-
-<div class="container">
-
-
-<div class="rose">
-
-🌹
-
-</div>
-
-
-<div class="main-heart">
-
-❤️
-
-</div>
-
-
-<h2>
-
-Gracias por existir.
-
-</h2>
-
-
-<p class="final">
-
-Esta página termina aquí...
-
-<br><br>
-
-pero nuestra historia
-todavía tiene muchas páginas
-por escribir.
-
-<br><br>
-
-<strong>
-
-Te quiero, Romi.
-
-</strong>
-
-<br><br>
-
-<span class="fade">
-
-— Con todo mi corazón.
-
-</span>
-
-</p>
-
-
-</div>
-
-</section>
-
-
-<!-- MODAL -->
-
-<div
-class="modal"
-id="modal">
-
-
-<div class="modal-box">
-
-
-<h2 id="modalTitle">
-
-✨
-
-</h2>
-
-
-<p id="modalText">
-
-</p>
-
-
-<button onclick="closeModal()">
-
-Cerrar ❤️
-
-</button>
-
-
-</div>
-
-</div>
-
-
-<script>
-
-
-/* =========================
-   ESTRELLAS
-========================= */
-
-const stars =
-document.getElementById("stars");
-
-
-for(let i=0;i<120;i++){
-
-    const star =
-    document.createElement("div");
-
-    star.className="star";
-
-    star.style.left =
-    Math.random()*100+"vw";
-
-    star.style.top =
-    Math.random()*100+"vh";
-
-    star.style.animationDelay =
-    Math.random()*4+"s";
-
-    stars.appendChild(star);
-
-}
-
-
-/* =========================
-   ABRIR REGALO
-========================= */
-
-function openGift(){
-
-    createParticles(35);
-
-    setTimeout(function(){
-
-        const historia =
-        document.getElementById("historia");
-
-        historia.scrollIntoView({
-
-            behavior:"smooth",
-
-            block:"start"
-
-        });
-
-    },600);
-
-}
-
-
-/* =========================
-   PARTICULAS
-========================= */
-
-function createParticl
+    class="secret"
+    id="finalSecret">
